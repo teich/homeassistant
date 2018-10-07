@@ -1,0 +1,27 @@
+- alias: Turn on WC light and fan when there is movement
+  trigger:
+    platform: state
+    entity_id: binary_sensor.4a60a2
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: 
+        - switch.4cdf41
+        - switch.4ce50c 
+  - service: timer.start
+    data:
+      entity_id: timer.wc
+
+- alias: Turn off WC 10 minutes after last movement
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.wc
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: 
+        - switch.4cdf41
+        - switch.4ce50c 

@@ -1,0 +1,7 @@
+filter:
+  include_entities:
+    - switch.2834fc  # Master Fan
+entity_config:
+  switch.2834fc:
+    name: Fan
+    type: outlet

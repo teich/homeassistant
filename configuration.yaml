@@ -1,0 +1,62 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 0
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  customize: !include customize.yaml
+
+frontend:
+config:
+updater:
+  include_used_components: true
+# discovery:
+conversation:
+history:
+logbook:
+map:
+sun:
+
+tts:
+  - platform: google
+
+insteon:
+  port: /dev/tty.usbserial-AL02YCVN
+
+media_player:
+  - platform: samsungtv
+    host: 192.168.1.195
+    port: 8001
+    mac: 64:1C:B0:7D:0C:1E
+
+august:
+  login_method: email
+  username: oren@teich.net
+  password: !secret august_password
+
+timer:
+  wc:
+    duration: '00:10:00'
+
+cover:
+  - platform: myq
+    username: oren@teich.net
+    password: !secret myq_password
+    type: chamberlain
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
+homekit: !include homekit.yaml
+cloud: !include cloud.yaml
+automation: !include automations.yaml
+light: !include lights.yaml
+group: !include groups.yaml
+script: !include scripts.yaml
+

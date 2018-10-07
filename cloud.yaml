@@ -1,0 +1,37 @@
+alexa:
+  filter:
+    include_entities:
+      - light.35857c # thunder
+      - light.3bcb8b # Lillies
+      - light.3cf3e7 # stairs
+      - light.3bc2f9 # living room overhead
+  entity_config:
+    light.35857c:
+      name: thunder
+    light.3bcb8b:
+      name: lilies 
+    light.3cf3e7:
+      name: stairs
+    light.3bc2f9:
+      name: living room
+
+google_actions:
+  filter:
+    include_entities:
+      - light.35857c # thunder
+      - light.3bcb8b # Lillies
+      - light.3cf3e7 # stairs
+      - light.3bc2f9 # living room overhead
+  entity_config:
+    light.35857c:
+      name: Thunder
+      room: dining room
+    light.3bcb8b:
+      name: lilies 
+      room: dining room
+      aliases:
+        - dining table
+    light.3cf3e7:
+      name: stairs
+    light.3bc2f9:
+      name: living room

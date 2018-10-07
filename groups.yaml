@@ -1,0 +1,91 @@
+#### VIEWS #####
+
+default_view:
+  name: Home
+  view: yes
+  entities:
+    - group.main_floor
+
+lights_view:
+  name: Lights
+  view: yes
+  entities:
+    - light.3d0e6a # Beckett Overhead
+    - switch.3d23d4 # Beckett Bathroom Vanity
+
+#### GROUPS #####
+beckett_room:
+  name: Beckett's Room
+  entities:
+    - light.3d0e6a # Beckett Overhead
+    - switch.3d23d4 # Beckett Bathroom Vanity
+    - light.becketts_room
+    - climate.becketts_room
+
+dining_room:
+  name: Dining Room
+  entities:
+    - light.35857c # thunder
+    - light.3bcb8b # Lillies
+
+downstairs:
+  name: Downstairs
+  entities:
+    - light.3bb4d4 # Downstairs: Hallway
+    - light.3cde52 # Downstairs Guest Bathroom
+    - light.3d164c # Bamboo Overhead
+    - switch.3d283c # Laundry
+    - switch.3d2af3 # Downstairs Side Outside
+    - climate.guest_bedroom
+
+Garage:
+  entities:
+    - cover.garage_door_opener
+
+Kitchen:
+  entities:
+    - light.3bafd3 # kitchen island
+    - light.3bc6b4 # kitchen overhead
+    - switch.38564e # kitchen cabinets
+
+living_room:
+  name: Living Room
+  entities:
+    - light.3bc2f9 # living room overhead
+    - lock.front_door
+    - climate.living_room
+
+main_floor:
+  name: Main Floor
+  entities:
+    - light.3bc2f9 # living room overhead
+    - light.3cf3e7 # stairs
+    - switch.4cdf41 # WC Fan
+    - switch.4ce50c # WC Overhead
+    - light.35857c # thunder
+    - light.3bcb8b # Lillies
+    - light.3bafd3 # kitchen island
+    - light.3bc6b4 # kitchen overhead
+    - switch.38564e # kitchen cabinets
+    - climate.living_room
+
+master:
+  name: Master Bedroom
+  entities:
+    - light.3bc0fd # master overhead
+    - switch.3d23c2 # Master Closet
+    - switch.3d2ac9 # Master Bathroom
+    - light.bed_strip
+    - light.oren_bedside
+    - switch.2834fc  # Master Fan
+    - climate.master
+
+patio:
+  name: Upstairs Patio
+  entities:
+    - switch.3855f7 # Upstairs Patio Under Seat Lighting
+    - switch.3d2d32 # Upstairs Patio Door Light
+
+
+#binary_sensor.4a60a2:
+#  friendly_name: WC Motion
