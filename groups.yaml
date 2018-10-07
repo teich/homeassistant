@@ -5,6 +5,7 @@ default_view:
   view: yes
   entities:
     - group.main_floor
+    - weather.dark_sky
 
 lights_view:
   name: Lights

@@ -18,6 +18,12 @@ logbook:
 map:
 sun:
 
+http:
+  api_password: !secret api_password
+  base_url: https://teich.network:8123
+  ssl_certificate: /Users/oren/.acme.sh/teich.network/fullchain.cer 
+  ssl_key: /Users/oren/.acme.sh/teich.network/teich.network.key
+
 tts:
   - platform: google
 
