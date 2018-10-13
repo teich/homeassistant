@@ -17,6 +17,7 @@ history:
 logbook:
 map:
 sun:
+ios:
 
 http:
   api_password: !secret api_password
