@@ -13,6 +13,16 @@ lights_view:
   entities:
     - light.3d0e6a # Beckett Overhead
     - switch.3d23d4 # Beckett Bathroom Vanity
+    - light.becketts_room
+
+heavy_view:
+  name: Lots
+  view: yes
+  entities:
+    - group.main_floor
+    - group.downstairs
+    - group.master
+    - group.patio
 
 #### GROUPS #####
 beckett_room:
@@ -38,6 +48,7 @@ downstairs:
     - switch.3d283c # Laundry
     - switch.3d2af3 # Downstairs Side Outside
     - climate.guest_bedroom
+    - switch.4ca27b #backyard patio light
 
 Garage:
   entities:

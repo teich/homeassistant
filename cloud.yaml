@@ -5,6 +5,7 @@ alexa:
       - light.3bcb8b # Lillies
       - light.3cf3e7 # stairs
       - light.3bc2f9 # living room overhead
+      - switch.4ca27b # backyard
   entity_config:
     light.35857c:
       name: thunder
@@ -14,6 +15,8 @@ alexa:
       name: stairs
     light.3bc2f9:
       name: living room
+    switch.4ca27b:
+      name: backyard
 
 google_actions:
   filter:
@@ -22,6 +25,7 @@ google_actions:
       - light.3bcb8b # Lillies
       - light.3cf3e7 # stairs
       - light.3bc2f9 # living room overhead
+      - switch.4ca27b # backyard
   entity_config:
     light.35857c:
       name: Thunder
@@ -35,3 +39,5 @@ google_actions:
       name: stairs
     light.3bc2f9:
       name: living room
+    switch.4ca27b:
+      name: backyard

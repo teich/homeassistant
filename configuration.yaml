@@ -30,6 +30,10 @@ tts:
 
 insteon:
   port: /dev/tty.usbserial-AL02YCVN
+  device_override:
+    - address: 3EBA98
+      cat: 0x00
+      subcat: 0x1c
 
 media_player:
   - platform: samsungtv

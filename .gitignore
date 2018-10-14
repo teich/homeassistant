@@ -14,6 +14,7 @@ __pycache__
 *.pyc
 
 # Other
+insteon_plm_device_info.dat
 *.uuid
 *.conf
 *.db

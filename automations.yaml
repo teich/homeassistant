@@ -25,3 +25,32 @@
       entity_id: 
         - switch.4cdf41
         - switch.4ce50c 
+
+
+- alias: Beckett Remote Light On
+  trigger:
+    platform: event
+    event_type: insteon.button_on
+    event_data:
+      address: 3eba98
+  condition:
+    - condition: state
+      entity_id: light.becketts_room
+      state: 'off'
+  action:
+    service: light.turn_on
+    entity_id: light.becketts_room
+
+- alias: Beckett Remote Light Off
+  trigger:
+    platform: event
+    event_type: insteon.button_off
+    event_data:
+      address: 3eba98
+  condition:
+    - condition: state
+      entity_id: light.becketts_room
+      state: 'on'
+  action:
+    service: light.turn_off
+    entity_id: light.becketts_room
