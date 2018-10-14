@@ -64,10 +64,12 @@ weather:
   - platform: darksky
     api_key: !secret darksky_api_key
 
+
+
 homekit: !include homekit.yaml
 cloud: !include cloud.yaml
 automation: !include automations.yaml
 light: !include lights.yaml
 group: !include groups.yaml
 script: !include scripts.yaml
-
+sensor: !include sensor.yaml

@@ -64,3 +64,13 @@ switch.4ce50c:
   friendly_name: WC Overhead
 switch.4ca27b:
   friendly_name: Backyard Patio Light
+
+
+
+# alert:
+#   lock_battery:
+#   name: 'Front Door Battery is Low'
+#   entity_id: binary_sensor.lock_battery_low 
+#   repeat: 1440
+#   notifiers:
+#     - orens_phone

@@ -81,6 +81,8 @@ main_floor:
     - light.3bc6b4 # kitchen overhead
     - switch.38564e # kitchen cabinets
     - climate.living_room
+    - sensor.front_door_battery
+    - lock.front_door
 
 master:
   name: Master Bedroom
