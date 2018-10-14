@@ -1,7 +1,11 @@
 filter:
   include_entities:
     - switch.2834fc  # Master Fan
+    - switch.4ca27b # backyard lights
 entity_config:
   switch.2834fc:
     name: Fan
+    type: outlet
+  switch.4ca27b:
+    name: Backyard
     type: outlet
