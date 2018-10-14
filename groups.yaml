@@ -1,11 +1,11 @@
 #### VIEWS #####
 
-default_view:
-  name: Home
-  view: yes
-  entities:
-    - group.main_floor
-    - weather.dark_sky
+# default_view:
+#   name: Home
+#   view: yes
+#   entities:
+#     - group.main_floor
+#     - weather.dark_sky
 
 lights_view:
   name: Lights
@@ -20,8 +20,9 @@ heavy_view:
   view: yes
   entities:
     - group.main_floor
-    - group.downstairs
     - group.master
+    - group.beckett_room
+    - group.downstairs
     - group.patio
 
 #### GROUPS #####
