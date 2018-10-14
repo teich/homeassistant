@@ -54,3 +54,17 @@
   action:
     service: light.turn_off
     entity_id: light.becketts_room
+
+- alias: Low battery front door alert
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_door_battery
+    below: '26'
+  action:
+    - service: notify.notify
+      data:
+        title: "LOW BATTERY"
+        message: "Replace front door lock battery"
+        data:
+          push:
+            badge: 0

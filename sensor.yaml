@@ -1,6 +1,6 @@
 - platform: template
   sensors:
     front_door_battery:
-      friendly_name: "Lock battery %"
+      friendly_name: "Front Door Lock Battery %"
       entity_id: lock.front_door
       value_template: "{{ states.lock.front_door.attributes.battery_level }}"
