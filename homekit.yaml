@@ -2,6 +2,10 @@ filter:
   include_entities:
     - switch.2834fc  # Master Fan
     - switch.4ca27b # backyard lights
+    - light.3bafd3 # island
+    - light.3bc6b4 # kitchen overhead
+    - switch.38564e # kitchen cabinets
+    
 entity_config:
   switch.2834fc:
     name: Fan
@@ -9,3 +13,10 @@ entity_config:
   switch.4ca27b:
     name: Backyard
     type: outlet
+  light.3bc6b4:
+    name: Kitchen Overhead
+  switch.38564e:
+    name: Kitchen Cabinets
+    type: light
+  light.3bafd3:
+    name: Kitchen Island
