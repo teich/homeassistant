@@ -6,6 +6,9 @@ alexa:
       - light.3cf3e7 # stairs
       - light.3bc2f9 # living room overhead
       - switch.4ca27b # backyard
+      - light.3bafd3 # island
+      - light.3bc6b4 # kitchen overhead
+      - switch.38564e # kitchen cabinets
   entity_config:
     light.35857c:
       name: thunder
@@ -17,6 +20,12 @@ alexa:
       name: living room
     switch.4ca27b:
       name: backyard
+    light.3bc6b4:
+      name: Kitchen Overhead
+    switch.38564e:
+      name: Kitchen Cabinets
+    light.3bafd3:
+      name: Kitchen Island
 
 google_actions:
   filter:
