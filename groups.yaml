@@ -1,11 +1,17 @@
 #### VIEWS #####
 
-# default_view:
-#   name: Home
-#   view: yes
-#   entities:
-#     - group.main_floor
-#     - weather.dark_sky
+default_view:
+  name: Home
+  view: yes
+  entities:
+    - group.main_floor
+    - weather.dark_sky
+    - camera.garage
+    - device_tracker.olivia
+    - device_tracker.orens_iphone
+    - cover.garage_door_opener
+    - group.kitchen
+    - group.dining_room
 
 lights_view:
   name: Lights
