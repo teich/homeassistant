@@ -68,3 +68,19 @@
         data:
           push:
             badge: 0
+
+- alias: TV trigger movie scene
+  trigger:
+    platform: state
+    entity_id: media_player.samsung_tv_remote
+    from: 'off'
+    to: 'on'
+  condition: 
+    - condition: state
+      entity_id: light.3bc2f9
+      state: 'on'
+    - condition: sun
+      after: sunset 
+  action:
+    service: scene.turn_on
+    entity_id: scene.movie

@@ -12,6 +12,7 @@ default_view:
     - cover.garage_door_opener
     - group.kitchen
     - group.dining_room
+    - scene.movie
 
 lights_view:
   name: Lights
