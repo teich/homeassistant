@@ -18,6 +18,7 @@ logbook:
 map:
 sun:
 ios:
+wemo:
 
 http:
   api_password: !secret api_password
