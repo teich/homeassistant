@@ -22,14 +22,14 @@ ios:
 http:
   api_password: !secret api_password
   base_url: https://teich.network:8123
-  ssl_certificate: /Users/oren/.acme.sh/teich.network/fullchain.cer 
-  ssl_key: /Users/oren/.acme.sh/teich.network/teich.network.key
+  ssl_certificate: /certificates/fullchain.pem 
+  ssl_key: /certificates/privkey.pem
 
 tts:
   - platform: google
 
 insteon:
-  port: /dev/tty.usbserial-AL02YCVN
+  port: /dev/ttyUSB0
   device_override:
     - address: 3EBA98
       cat: 0x00
