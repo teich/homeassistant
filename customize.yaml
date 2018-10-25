@@ -67,10 +67,7 @@ switch.4ca27b:
 
 
 
-# alert:
-#   lock_battery:
-#   name: 'Front Door Battery is Low'
-#   entity_id: binary_sensor.lock_battery_low 
-#   repeat: 1440
-#   notifiers:
-#     - orens_phone
+sensor.washing_machine_status:
+  icon: mdi:washing-machine
+sensor.dishwasher_status:
+  icon: mdi:washing-machine

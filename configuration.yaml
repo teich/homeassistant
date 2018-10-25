@@ -11,7 +11,7 @@ frontend:
 config:
 updater:
   include_used_components: true
-# discovery:
+discovery:
 conversation:
 history:
 logbook:
@@ -19,6 +19,9 @@ map:
 sun:
 ios:
 wemo:
+  static:
+    - 192.168.1.225
+    - 192.168.1.238
 
 http:
   api_password: !secret api_password
@@ -65,7 +68,23 @@ weather:
   - platform: darksky
     api_key: !secret darksky_api_key
 
-
+input_select:
+  dishwasher_status:
+    name: Dishwasher Status
+    options:
+      - Dirty
+      - Running
+      - Drying
+      - Clean
+    initial: Dirty
+  washing_machine_status:
+    name: Washing Machine Status
+    options:
+      - Idle
+      - Running
+      - Finishing
+      - Clean
+    initial: Idle
 
 homekit: !include homekit.yaml
 cloud: !include cloud.yaml

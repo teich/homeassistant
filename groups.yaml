@@ -12,6 +12,7 @@ default_view:
     - cover.garage_door_opener
     - group.kitchen
     - group.dining_room
+    - group.appliances
     - scene.movie
 
 lights_view:
@@ -108,6 +109,23 @@ patio:
     - switch.3855f7 # Upstairs Patio Under Seat Lighting
     - switch.3d2d32 # Upstairs Patio Door Light
 
+washing_machine:
+  name: Washing Machine
+  entities:
+    - sensor.washing_machine_status
+    - switch.washing_machine
+    - sensor.washing_machine_power
 
-#binary_sensor.4a60a2:
-#  friendly_name: WC Motion
+dishwasher:
+  name: Dishwasher
+  entities:
+    - sensor.dishwasher_status
+    - switch.dishwasher
+    - sensor.dishwasher_power
+
+kitchen:
+  name: Appliances
+  view: yes
+  entities:
+    - group.washing_machine
+    - group.dishwasher
