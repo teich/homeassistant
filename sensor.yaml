@@ -13,8 +13,8 @@
     washing_machine_power:
       value_template: '{{ states.switch.washing_machine.attributes.current_power_w }}'
       friendly_name: 'Washing Machine Power'
-      unit_of_measurement: 'volts'
+      unit_of_measurement: 'W'
     dishwasher_power:
       value_template: '{{ states.switch.dishwasher.attributes.current_power_w }}'
       friendly_name: 'Dishwasher Power'
-      unit_of_measurement: 'volts'
+      unit_of_measurement: 'W'
