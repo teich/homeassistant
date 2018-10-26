@@ -1,0 +1,116 @@
+- platform: mqtt_json
+  name: "Living Room"
+  state_topic: "insteon/3b.c2.f9/state"
+  command_topic: "insteon/3b.c2.f9/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Stairs'
+  state_topic: "insteon/3c.f3.e7/state"
+  command_topic: "insteon/3c.f3.e7/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Thunder'
+  state_topic: "insteon/35.85.7c/state"
+  command_topic: "insteon/35.85.7c/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Kitchen Island'
+  state_topic: "insteon/3b.af.d3/state"
+  command_topic: "insteon/3b.af.d3/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Downstairs: Hallway'
+  state_topic: "insteon/3b.b4.d4/state"
+  command_topic: "insteon/3b.b4.d4/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Master Overhead'
+  state_topic: "insteon/3b.c0.fd/state"
+  command_topic: "insteon/3b.c0.fd/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Kitchen Overhead'
+  state_topic: "insteon/3b.c6.b4/state"
+  command_topic: "insteon/3b.c6.b4/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Lilies'
+  state_topic: "insteon/3b.cb.8b/state"
+  command_topic: "insteon/3b.cb.8b/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Downstairs Guest Bathroom'
+  state_topic: "insteon/3c.de.52/state"
+  command_topic: "insteon/3c.de.52/level"
+  brightness: true
+
+- name: 'Beckett Overhead'
+  state_topic: "insteon/3d.0e.6a/state"
+  command_topic: "insteon/3d.0e.6a/level"
+  brightness: true
+
+- platform: mqtt_json
+  name: 'Bamboo Overhead'
+  state_topic: "insteon/3d.16.4c/state"
+  command_topic: "insteon/3d.16.4c/level"
+  brightness: true
+
+
+
+- platform: mqtt
+  state_topic: 'insteon/38.55.f7/state'
+  command_topic: 'insteon/38.55.f7/set'
+  name: 'Upstairs Patio Under Seat Lighting'
+
+- platform: mqtt
+  state_topic: 'insteon/38.56.4e/state'
+  command_topic: 'insteon/38.56.4e/set'
+  name: 'Kitchen Cabinets'
+
+- platform: mqtt
+  state_topic: 'insteon/4c.e5.0c/state'
+  command_topic: 'insteon/4c.e5.0c/set'
+  name: 'WC Overhead'
+
+- platform: mqtt
+  state_topic: 'insteon/4c.a2.7b/state'
+  command_topic: 'insteon/4c.a2.7b/set'
+  name: 'Backyard Patio Light'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.23.c2/state'
+  command_topic: 'insteon/3d.23.c2/set'
+  name: 'Master Closet'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.23.d4/state'
+  command_topic: 'insteon/3d.23.d4/set'
+  name: 'Beckett Bathroom Vanity'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.28.3c/state'
+  command_topic: 'insteon/3d.28.3c/set'
+  name: 'Laundry'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.2a.c9/state'
+  command_topic: 'insteon/3d.2a.c9/set'
+  name: 'Master Bathroom'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.2a.f3/state'
+  command_topic: 'insteon/3d.2a.f3/set'
+  name: 'Downstairs Side Outside'
+
+- platform: mqtt
+  state_topic: 'insteon/3d.2d.32/state'
+  command_topic: 'insteon/3d.2d.32/set'
+  name: 'Upstairs Patio Door Light'

@@ -1,0 +1,11 @@
+- platform: mqtt
+  state_topic: 'insteon/4c.df.41/state'
+  command_topic: 'insteon/4c.df.41/set'
+  name: 'WC Fan'
+  icon: mdi:fan
+
+- platform: mqtt
+  state_topic: 'insteon/28.34.fc/state'
+  command_topic: 'insteon/28.34.fc/set'
+  name: 'Master Fan'
+  icon: mdi:fan

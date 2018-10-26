@@ -19,8 +19,8 @@
       friendly_name: 'Dishwasher Power'
       unit_of_measurement: 'W'
 
-- platform: speedtest
-  monitored_conditions:
-    - ping
-    - download
-    - upload
+# - platform: speedtest
+#   monitored_conditions:
+#     - ping
+#     - download
+#     - upload

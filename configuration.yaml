@@ -11,7 +11,7 @@ frontend:
 config:
 updater:
   include_used_components: true
-discovery:
+# discovery:
 conversation:
 history:
 logbook:
@@ -19,6 +19,8 @@ map:
 sun:
 ios:
 influxdb:
+logger:
+  default: critical
 
 wemo:
   static:
@@ -34,12 +36,8 @@ http:
 tts:
   - platform: google
 
-insteon:
-  port: /dev/ttyUSB0
-  device_override:
-    - address: 3EBA98
-      cat: 0x00
-      subcat: 0x1c
+mqtt:
+  broker: localhost
 
 media_player:
   - platform: samsungtv
@@ -70,29 +68,35 @@ weather:
   - platform: darksky
     api_key: !secret darksky_api_key
 
-input_select:
-  dishwasher_status:
-    name: Dishwasher Status
-    options:
-      - Dirty
-      - Running
-      - Drying
-      - Clean
-    initial: Dirty
-  washing_machine_status:
-    name: Washing Machine Status
-    options:
-      - Idle
-      - Running
-      - Finishing
-      - Clean
-    initial: Idle
+# input_select:
+#   dishwasher_status:
+#     name: Dishwasher Status
+#     options:
+#       - Dirty
+#       - Running
+#       - Drying
+#       - Clean
+#     initial: Dirty
+#   washing_machine_status:
+#     name: Washing Machine Status
+#     options:
+#       - Idle
+#       - Running
+#       - Finishing
+#       - Clean
+#     initial: Idle
+
+
+
 
 homekit: !include homekit.yaml
 cloud: !include cloud.yaml
 automation: !include automations.yaml
 light: !include lights.yaml
+switch: !include switches.yaml
 group: !include groups.yaml
 script: !include scripts.yaml
 sensor: !include sensor.yaml
 scene: !include scene.yaml
+
+

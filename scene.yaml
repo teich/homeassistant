@@ -1,11 +1,11 @@
-- name: Movie
-  entities:
-    light.3bc2f9:
-      state: on
-      brightness: 10
-    light.3cf3e7: off # stairs
-    light.35857c: off # thunder
-    light.3bcb8b: off # Lillies
-    light.3bafd3: off # kitchen island
-    light.3bc6b4: off # kitchen overhead
-    switch.38564e: off # kitchen cabinets
+# - name: Movie
+#   entities:
+#     light.3bc2f9:
+#       state: on
+#       brightness: 10
+#     light.3cf3e7: off # stairs
+#     light.35857c: off # thunder
+#     light.3bcb8b: off # Lillies
+#     light.3bafd3: off # kitchen island
+#     light.3bc6b4: off # kitchen overhead
+#     switch.38564e: off # kitchen cabinets
