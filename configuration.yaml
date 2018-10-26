@@ -18,6 +18,8 @@ logbook:
 map:
 sun:
 ios:
+influxdb:
+
 wemo:
   static:
     - 192.168.1.225
