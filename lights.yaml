@@ -52,7 +52,8 @@
   command_topic: "insteon/3c.de.52/level"
   brightness: true
 
-- name: 'Beckett Overhead'
+- platform: mqtt_json
+  name: 'Beckett Overhead'
   state_topic: "insteon/3d.0e.6a/state"
   command_topic: "insteon/3d.0e.6a/level"
   brightness: true
@@ -62,8 +63,6 @@
   state_topic: "insteon/3d.16.4c/state"
   command_topic: "insteon/3d.16.4c/level"
   brightness: true
-
-
 
 - platform: mqtt
   state_topic: 'insteon/38.55.f7/state'

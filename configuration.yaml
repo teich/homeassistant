@@ -99,4 +99,11 @@ script: !include scripts.yaml
 sensor: !include sensor.yaml
 scene: !include scene.yaml
 
+binary_sensor:
+  - platform: mqtt
+    state_topic: 'insteon/4a.60.a2/state'
+    device_class: 'motion'
 
+  - platform: mqtt
+    state_topic: 'insteon/4a.60.a2/low_battery'
+    device_class: 'battery'
