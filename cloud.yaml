@@ -1,52 +1,32 @@
 alexa:
   filter:
     include_entities:
-      - light.35857c # thunder
-      - light.3bcb8b # Lillies
-      - light.3cf3e7 # stairs
-      - light.3bc2f9 # living room overhead
-      - switch.4ca27b # backyard
-      - light.3bafd3 # island
-      - light.3bc6b4 # kitchen overhead
-      - switch.38564e # kitchen cabinets
-  entity_config:
-    light.35857c:
-      name: thunder
-    light.3bcb8b:
-      name: lilies 
-    light.3cf3e7:
-      name: stairs
-    light.3bc2f9:
-      name: living room
-    switch.4ca27b:
-      name: backyard
-    light.3bc6b4:
-      name: Kitchen Overhead
-    switch.38564e:
-      name: Kitchen Cabinets
-    light.3bafd3:
-      name: Kitchen Island
+      - light.thunder 
+      - light.lilies 
+      - light.stairs 
+      - light.living_room 
+      - light.backyard
+      - light.kitchen_island 
+      - light.kitcen_overhead 
+      - light.kitchen_cabinets
 
 google_actions:
   filter:
     include_entities:
-      - light.35857c # thunder
-      - light.3bcb8b # Lillies
-      - light.3cf3e7 # stairs
-      - light.3bc2f9 # living room overhead
-      - switch.4ca27b # backyard
+      - light.thunder 
+      - light.lilies 
+      - light.stairs 
+      - light.living_room 
+      - light.backyard
+      - light.kitchen_island 
+      - light.kitcen_overhead 
+      - light.kitchen_cabinets
   entity_config:
-    light.35857c:
+    light.thunder:
       name: Thunder
       room: dining room
-    light.3bcb8b:
+    light.lilies:
       name: lilies 
       room: dining room
       aliases:
         - dining table
-    light.3cf3e7:
-      name: stairs
-    light.3bc2f9:
-      name: living room
-    switch.4ca27b:
-      name: backyard

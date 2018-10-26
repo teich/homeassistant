@@ -1,75 +1,4 @@
 
-
-
-# light.3bc2f9:
-#   friendly_name: Living Room
-# light.3cf3e7:
-#   friendly_name: Stairs
-# light.35857c:
-#   friendly_name: Thunder
-# light.3bafd3:
-#   friendly_name: Kitchen Island
-# light.3bb4d4:
-#   friendly_name: 'Downstairs: Hallway'
-# light.3bb8f0:
-#   friendly_name: 3WAY (Beckett)
-#   hidden: true
-# light.3bbe8e:
-#   friendly_name: 3WAY (Living Room)
-#   hidden: true
-# light.3bc0fd:
-#   friendly_name: Master Overhead
-# light.3bc6b4:
-#   friendly_name: Kitchen Overhead
-# light.3bcb8b:
-#   friendly_name: Lilies
-# light.3cde52:
-#   friendly_name: Downstairs Guest Bathroom
-# light.3ce653:
-#   friendly_name: 3WAY (Stairs Beckett)
-#   hidden: true
-# switch.2834fc:
-#   friendly_name: Master Fan
-# switch.38564e:
-#   friendly_name: Kitchen Cabinets
-# switch.3855f7:
-#   friendly_name: Upstairs Patio Under Seat Lighting
-# light.3cf080:
-#   friendly_name: 3WAY (Stairs Laundry)
-#   hidden: true
-# light.3cf0f2:
-#   friendly_name: 3WAY (Downstairs Hallway Backdoor)
-#   hidden: true
-# light.3cf429:
-#   friendly_name: 3WAY (Stairs Main)
-#   hidden: true
-# light.3d0e6a:
-#   friendly_name: Beckett Overhead
-# light.3d164c:
-#   friendly_name: Bamboo Overhead
-# switch.3d23c2:
-#   friendly_name: Master Closet
-# switch.3d23d4:
-#   friendly_name: Beckett Bathroom Vanity
-# switch.3d283c:
-#   friendly_name: Laundry
-# switch.3d2ac9:
-#   friendly_name: Master Bathroom
-# switch.3d2af3:
-#   friendly_name: Downstairs Side Outside
-# switch.3d2d32:
-#   friendly_name: Upstairs Patio Door Light
-# binary_sensor.4a60a2:
-#   friendly_name: WC Motion
-# switch.4cdf41:
-#   friendly_name: WC Fan
-# switch.4ce50c:
-#   friendly_name: WC Overhead
-# switch.4ca27b:
-#   friendly_name: Backyard Patio Light
-
-
-
 sensor.washing_machine_status:
   icon: mdi:washing-machine
 sensor.dishwasher_status:
@@ -77,4 +6,6 @@ sensor.dishwasher_status:
 sensor.washing_machine_power:
   icon: mdi:flash
 sensor.dishwasher_power:
+  icon: mdi:flash
+sensor.dryer_power:
   icon: mdi:flash

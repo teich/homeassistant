@@ -1,131 +1,140 @@
 #### VIEWS #####
 
-# default_view:
-#   name: Home
-#   view: yes
-#   entities:
-#     - group.main_floor
-#     - weather.dark_sky
-#     - camera.garage
-#     - device_tracker.olivia
-#     - device_tracker.orens_iphone
-#     - cover.garage_door_opener
-#     - group.kitchen
-#     - group.dining_room
-#     - group.appliances
-#     - scene.movie
+default_view:
+  name: Home
+  view: yes
+  entities:
+    - group.main_floor
+    - weather.dark_sky
+    - camera.garage
+    - device_tracker.olivia
+    - device_tracker.orens_iphone
+    - cover.garage_door_opener
+    - group.kitchen
+    - group.dining_room
+    - group.appliances
+    - scene.movie
 
-# lights_view:
-#   name: Lights
-#   view: yes
-#   entities:
-#     - light.3d0e6a # Beckett Overhead
-#     - switch.3d23d4 # Beckett Bathroom Vanity
-#     - light.becketts_room
+lights_view:
+  name: Lights
+  view: yes
+  entities:
+    - light.3d0e6a # Beckett Overhead
+    - switch.3d23d4 # Beckett Bathroom Vanity
+    - light.becketts_room
 
-# heavy_view:
-#   name: Lots
-#   view: yes
-#   entities:
-#     - group.main_floor
-#     - group.master
-#     - group.beckett_room
-#     - group.downstairs
-#     - group.patio
+heavy_view:
+  name: Lots
+  view: yes
+  entities:
+    - group.main_floor
+    - group.master
+    - group.beckett_room
+    - group.downstairs
+    - group.patio
 
-# #### GROUPS #####
-# beckett_room:
-#   name: Beckett's Room
-#   entities:
-#     - light.3d0e6a # Beckett Overhead
-#     - switch.3d23d4 # Beckett Bathroom Vanity
-#     - light.becketts_room
-#     - climate.becketts_room
+#### GROUPS #####
+beckett_room:
+  name: Beckett's Room
+  entities:
+    - light.beckett_overhead 
+    - light.Beckett_Bathroom_Vanity_2
+    - light.becketts_room
+    - climate.becketts_room
 
-# dining_room:
-#   name: Dining Room
-#   entities:
-#     - light.35857c # thunder
-#     - light.3bcb8b # Lillies
+dining_room:
+  name: Dining Room
+  entities:
+    - light.thunder 
+    - light.lilies 
 
-# downstairs:
-#   name: Downstairs
-#   entities:
-#     - light.3bb4d4 # Downstairs: Hallway
-#     - light.3cde52 # Downstairs Guest Bathroom
-#     - light.3d164c # Bamboo Overhead
-#     - switch.3d283c # Laundry
-#     - switch.3d2af3 # Downstairs Side Outside
-#     - climate.guest_bedroom
-#     - switch.4ca27b #backyard patio light
+downstairs:
+  name: Downstairs
+  entities:
+    - light.downstairs_hallway
+    - light.guest_bathroom
+    - light.bamboo_overhead
+    - light.laundry
+    - light.downstairs_side_outside_2
+    - climate.guest_bedroom
+    - light.backyard
 
-# Garage:
-#   entities:
-#     - cover.garage_door_opener
+Garage:
+  entities:
+    - cover.garage_door_opener
 
-# Kitchen:
-#   entities:
-#     - light.3bafd3 # kitchen island
-#     - light.3bc6b4 # kitchen overhead
-#     - switch.38564e # kitchen cabinets
+Kitchen:
+  entities:
+    - light.kitchen_island 
+    - light.kitchen_overhead 
+    - light.kitchen_cabinets
 
-# living_room:
-#   name: Living Room
-#   entities:
-#     - light.3bc2f9 # living room overhead
-#     - lock.front_door
-#     - climate.living_room
+living_room:
+  name: Living Room
+  entities:
+    - light.living_room
+    - lock.front_door
+    - climate.living_room
 
-# main_floor:
-#   name: Main Floor
-#   entities:
-#     - light.3bc2f9 # living room overhead
-#     - light.3cf3e7 # stairs
-#     - switch.4cdf41 # WC Fan
-#     - switch.4ce50c # WC Overhead
-#     - light.35857c # thunder
-#     - light.3bcb8b # Lillies
-#     - light.3bafd3 # kitchen island
-#     - light.3bc6b4 # kitchen overhead
-#     - switch.38564e # kitchen cabinets
-#     - climate.living_room
-#     - sensor.front_door_battery
-#     - lock.front_door
+main_floor:
+  name: Main Floor
+  entities:
+    - light.living_room 
+    - light.stairs
+    - switch.wc_fan 
+    - light.wc_overhead
+    - light.thunder
+    - light.lilies
+    - light.kitchen_island
+    - light.kitchen_overhead
+    - light.kitchen_cabinets
+    - climate.living_room
+    - sensor.front_door_battery
+    - lock.front_door
 
-# master:
-#   name: Master Bedroom
-#   entities:
-#     - light.3bc0fd # master overhead
-#     - switch.3d23c2 # Master Closet
-#     - switch.3d2ac9 # Master Bathroom
-#     - light.bed_strip
-#     - light.oren_bedside
-#     - switch.2834fc  # Master Fan
-#     - climate.master
+master:
+  name: Master Bedroom
+  entities:
+    - light.master_overhead # master overhead
+    - light.master_closet
+    - light.master_bathroom
+    - light.bed_strip
+    - light.oren_bedside
+    - switch.master_fan  # Master Fan
+    - climate.master
 
-# patio:
-#   name: Upstairs Patio
-#   entities:
-#     - switch.3855f7 # Upstairs Patio Under Seat Lighting
-#     - switch.3d2d32 # Upstairs Patio Door Light
+patio:
+  name: Upstairs Patio
+  entities:
+    - light.upstairs_patio_door
+    - light.upstairs_patio_seat
+    
+washing_machine:
+  name: Washing Machine
+  entities:
+    - sensor.washing_machine_status
+    - switch.washing_machine
+    - sensor.washing_machine_power
 
-# washing_machine:
-#   name: Washing Machine
-#   entities:
-#     - sensor.washing_machine_status
-#     - switch.washing_machine
-#     - sensor.washing_machine_power
+dishwasher:
+  name: Dishwasher
+  entities:
+    - sensor.dishwasher_status
+    - switch.dishwasher
+    - sensor.dishwasher_power
 
-# dishwasher:
-#   name: Dishwasher
-#   entities:
-#     - sensor.dishwasher_status
-#     - switch.dishwasher
-#     - sensor.dishwasher_power
+dryer:
+  name: Dryer
+  entities:
+    - sensor.dryer_status
+    - switch.dryer
+    - sensor.dryer_power
 
-# kitchen:
-#   name: Appliances
-#   view: yes
-#   entities:
-#     - group.washing_machine
-#     - group.dishwasher
+kitchen:
+  name: Appliances
+  view: yes
+  entities:
+    - group.washing_machine
+    - group.dishwasher
+    - group.dryer
+

@@ -18,6 +18,10 @@
       value_template: '{{ states.switch.dishwasher.attributes.current_power_w }}'
       friendly_name: 'Dishwasher Power'
       unit_of_measurement: 'W'
+    dryer_power:
+      value_template: '{{ states.switch.dryer.attributes.current_power_w }}'
+      friendly_name: 'Dryer Power'
+      unit_of_measurement: 'W'
 
 # - platform: speedtest
 #   monitored_conditions:

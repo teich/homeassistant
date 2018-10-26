@@ -23,7 +23,7 @@
   brightness: true
 
 - platform: mqtt_json
-  name: 'Downstairs: Hallway'
+  name: 'Downstairs Hallway'
   state_topic: "insteon/3b.b4.d4/state"
   command_topic: "insteon/3b.b4.d4/level"
   brightness: true
@@ -48,7 +48,7 @@
   brightness: true
 
 - platform: mqtt_json
-  name: 'Downstairs Guest Bathroom'
+  name: 'Guest Bathroom'
   state_topic: "insteon/3c.de.52/state"
   command_topic: "insteon/3c.de.52/level"
   brightness: true
@@ -69,8 +69,7 @@
 - platform: mqtt
   state_topic: 'insteon/38.55.f7/state'
   command_topic: 'insteon/38.55.f7/set'
-  name: 'Upstairs Patio Under Seat Lighting'
-  unique_id: 'patio_underlight'
+  name: 'Upstairs Patio Seat'
 
 - platform: mqtt
   state_topic: 'insteon/38.56.4e/state'
@@ -85,8 +84,7 @@
 - platform: mqtt
   state_topic: 'insteon/4c.a2.7b/state'
   command_topic: 'insteon/4c.a2.7b/set'
-  name: 'Backyard Light'
-  unique_id: 'backyard'
+  name: 'Backyard'
 
 - platform: mqtt
   state_topic: 'insteon/3d.23.c2/state'
@@ -97,8 +95,7 @@
   state_topic: 'insteon/3d.23.d4/state'
   command_topic: 'insteon/3d.23.d4/set'
   name: 'Beckett Bathroom Vanity'
-  unique_id: "beckett_bath_vanity"
-
+  
 - platform: mqtt
   state_topic: 'insteon/3d.28.3c/state'
   command_topic: 'insteon/3d.28.3c/set'
@@ -113,11 +110,9 @@
   state_topic: 'insteon/3d.2a.f3/state'
   command_topic: 'insteon/3d.2a.f3/set'
   name: 'Downstairs Side Outside'
-  unique_id: "down_side"
 
 - platform: mqtt
   state_topic: 'insteon/3d.2d.32/state'
   command_topic: 'insteon/3d.2d.32/set'
-  name: 'Upstairs Patio Door Light'
-  unique_id: "upstairs_patio"
+  name: 'Upstairs Patio Door'
 
