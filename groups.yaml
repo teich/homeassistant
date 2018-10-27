@@ -15,14 +15,6 @@ default_view:
     - group.appliances
     - scene.movie
 
-lights_view:
-  name: Lights
-  view: yes
-  entities:
-    - light.3d0e6a # Beckett Overhead
-    - switch.3d23d4 # Beckett Bathroom Vanity
-    - light.becketts_room
-
 heavy_view:
   name: Lots
   view: yes

@@ -7,7 +7,7 @@ alexa:
       - light.living_room 
       - light.backyard
       - light.kitchen_island 
-      - light.kitcen_overhead 
+      - light.kitchen_overhead 
       - light.kitchen_cabinets
 
 google_actions:
@@ -19,7 +19,7 @@ google_actions:
       - light.living_room 
       - light.backyard
       - light.kitchen_island 
-      - light.kitcen_overhead 
+      - light.kitchen_overhead 
       - light.kitchen_cabinets
   entity_config:
     light.thunder:
