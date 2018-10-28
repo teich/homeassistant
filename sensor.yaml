@@ -22,7 +22,14 @@
       value_template: '{{ states.switch.dryer.attributes.current_power_w }}'
       friendly_name: 'Dryer Power'
       unit_of_measurement: 'W'
-
+    master_temp:
+      value_template: '{{ states.climate.master.attributes.current_temperature }}'
+      friendly_name: 'Master Temperature'
+      unit_of_measurement: 'Degrees'
+    outside_temp:
+      value_template: '{{ states.weather.dark_sky.attributes.temperature }}'
+      friendly_name: 'Outside temperature'
+      unit_of_measurement: 'Degrees'
 # - platform: speedtest
 #   monitored_conditions:
 #     - ping

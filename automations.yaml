@@ -40,6 +40,105 @@
           push:
             badge: 0
 
+- alias: Sunset Lights
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:00:00"
+  condition:
+    condition: state
+    entity_id: group.all_devices
+    state: 'home'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.living_room
+
+- alias: "Lights when coming home"
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'away'
+    to: 'home'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: state
+        entity_id: light.living_room
+        state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.living_room
+
+- alias: "Set dishwasher active when power detected"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.dishwasher_power
+      above: 10
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.dishwasher_status
+        option: Running
+
+- alias: Set dishwasher drying when power drops
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.dishwasher_power
+      below: 10
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.dishwasher_status
+        state: Running
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.dishwasher_status
+        option: Drying
+
+- alias: Set dishwasher clean
+  trigger:
+    - platform: state
+      entity_id: input_select.dishwasher_status
+      to: Drying
+      for:
+        minutes: 40
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.dishwasher_status
+        state: Drying
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.dishwasher_status
+        option: Clean
+
+- alias : Master fan
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.master_temp
+    value_template: '{{ sensor.master_temp - sensor.outside_temp }}'
+    above: 10
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: state    
+        entity_id: group.all_devices
+        state: 'home'
+      - condition: numeric_state
+        entity_id: sensor.master_temp
+        above: 68
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.master_fan
+
 #- alias: TV trigger movie scene
 #  trigger:
 #    platform: state
