@@ -92,6 +92,18 @@ panel_iframe:
     url: 'http://toodle.local:3000'
     icon: mdi:chart-areaspline
 
+apple_tv:
+  - name: Living Room Apple TV
+    host: 192.168.1.236
+    login_id: !secret atv_login_id
+    credentials: !secret atv_credentials
+
+device_tracker:
+  - platform: unifi
+    host: 192.168.1.100
+    username: !secret unifi_user
+    password: !secret unifi_password
+    verify_ssl: false   
 
 homekit: !include homekit.yaml
 cloud: !include cloud.yaml

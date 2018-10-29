@@ -5,15 +5,16 @@ default_view:
   view: yes
   entities:
     - group.main_floor
+    - group.household
     - weather.dark_sky
     - camera.garage
-    - device_tracker.olivia
-    - device_tracker.orens_iphone
+    # - device_tracker.olivia
+    # - device_tracker.orens_iphone
     - cover.garage_door_opener
     - group.kitchen
     - group.dining_room
     - group.appliances
-    - scene.movie
+    - media_player.living_room_apple_tv
 
 heavy_view:
   name: Lots
@@ -67,6 +68,7 @@ living_room:
     - light.living_room
     - lock.front_door
     - climate.living_room
+    - media_player.living_room_apple_tv
 
 main_floor:
   name: Main Floor
@@ -129,4 +131,10 @@ kitchen:
     - group.washing_machine
     - group.dishwasher
     - group.dryer
+
+household:
+  - device_tracker.orensiphone
+  - device_tracker.oliviasx
+  - device_tracker.olivia
+  - device_tracker.orens_iphone
 

@@ -47,7 +47,7 @@
     offset: "00:00:00"
   condition:
     condition: state
-    entity_id: group.all_devices
+    entity_id: group.household
     state: 'home'
   action:
     service: homeassistant.turn_on
@@ -56,7 +56,7 @@
 - alias: "Lights when coming home"
   trigger:
     platform: state
-    entity_id: group.all_devices
+    entity_id: group.household
     from: 'away'
     to: 'home'
   condition:
@@ -118,7 +118,7 @@
         entity_id: input_select.dishwasher_status
         option: Clean
 
-- alias : Master fan
+- alias : Master fan automation
   trigger:
   - platform: numeric_state
     entity_id: sensor.master_temp
@@ -130,7 +130,7 @@
       - condition: sun
         after: sunset
       - condition: state    
-        entity_id: group.all_devices
+        entity_id: group.household
         state: 'home'
       - condition: numeric_state
         entity_id: sensor.master_temp
@@ -139,18 +139,29 @@
     service: homeassistant.turn_on
     entity_id: switch.master_fan
 
-#- alias: TV trigger movie scene
-#  trigger:
-#    platform: state
-#    entity_id: media_player.samsung_tv_remote
-#    from: 'off'
-#    to: 'on'
-#  condition: 
-#    - condition: state
-#      entity_id: light.3bc2f9
-#      state: 'on'
-#    - condition: sun
-#      after: sunset 
-#  action:
-#    service: scene.turn_on
-#    entity_id: scene.movie
+- alias: Master fan morning off
+  trigger:
+    platform: time
+    at: '06:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.master_fan
+
+- alias: TV trigger movie scene
+  trigger:
+    platform: state
+    entity_id: media_player.living_room_apple_tv
+    from: 'idle'
+    to: 'playing'
+  condition: 
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.living_room
+        state: 'on'
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.movie
