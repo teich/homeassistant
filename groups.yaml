@@ -26,6 +26,14 @@ heavy_view:
     - group.downstairs
     - group.patio
 
+watching:
+  name: "Media"
+  view: yes
+  icon: mdi:play
+  entities:
+    - group.tv
+    - scene.movie
+
 #### GROUPS #####
 beckett_room:
   name: Beckett's Room
@@ -137,4 +145,8 @@ household:
   - device_tracker.oliviasx
   - device_tracker.olivia
   - device_tracker.orens_iphone
+
+tv:
+  - media_player.living_room_apple_tv
+  - media_player.samsung_tv_remote
 
