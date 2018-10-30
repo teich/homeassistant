@@ -6,6 +6,8 @@ homeassistant:
   unit_system: imperial
   time_zone: America/Los_Angeles
   customize: !include customize.yaml
+  packages: !include_dir_named packages
+
 
 frontend:
 config:
@@ -20,7 +22,7 @@ sun:
 ios:
 influxdb:
 logger:
-  default: critical
+  default: warning
 
 wemo:
   static:
@@ -67,24 +69,6 @@ nest:
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
-
-input_select:
-  dishwasher_status:
-    name: Dishwasher Status
-    options:
-      - Dirty
-      - Running
-      - Drying
-      - Clean
-    initial: Dirty
-  washing_machine_status:
-    name: Washing Machine Status
-    options:
-      - Idle
-      - Running
-      - Finishing
-      - Clean
-    initial: Idle
 
 panel_iframe:
   grafana:

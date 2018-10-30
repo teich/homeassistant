@@ -4,24 +4,6 @@
       friendly_name: "Front Door Lock Battery %"
       entity_id: lock.front_door
       value_template: "{{ states.lock.front_door.attributes.battery_level }}"
-    washing_machine_status:
-      value_template: '{{ states.input_select.washing_machine_status.state}}'
-      friendly_name: 'Washing Machine Status'
-    dishwasher_status:
-      value_template: '{{ states.input_select.dishwasher_status.state}}'
-      friendly_name: 'Dishwasher Status'
-    washing_machine_power:
-      value_template: '{{ states.switch.washing_machine.attributes.current_power_w }}'
-      friendly_name: 'Washing Machine Power'
-      unit_of_measurement: 'W'
-    dishwasher_power:
-      value_template: '{{ states.switch.dishwasher.attributes.current_power_w }}'
-      friendly_name: 'Dishwasher Power'
-      unit_of_measurement: 'W'
-    dryer_power:
-      value_template: '{{ states.switch.dryer.attributes.current_power_w }}'
-      friendly_name: 'Dryer Power'
-      unit_of_measurement: 'W'
     master_temp:
       value_template: '{{ states.climate.master.attributes.current_temperature }}'
       friendly_name: 'Master Temperature'

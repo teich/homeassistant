@@ -1,11 +1,1 @@
 
-sensor.washing_machine_status:
-  icon: mdi:washing-machine
-sensor.dishwasher_status:
-  icon: mdi:washing-machine
-sensor.washing_machine_power:
-  icon: mdi:flash
-sensor.dishwasher_power:
-  icon: mdi:flash
-sensor.dryer_power:
-  icon: mdi:flash

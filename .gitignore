@@ -43,4 +43,5 @@ deps
 .cloud
 .storage/*
 .homekit.state
+@eaDir/
 
