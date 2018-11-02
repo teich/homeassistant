@@ -8,7 +8,6 @@ homeassistant:
   customize: !include customize.yaml
   packages: !include_dir_named packages
 
-
 frontend:
 config:
 conversation:
@@ -23,7 +22,7 @@ updater:
   include_used_components: true
 
 influxdb:
-  host: influxdb
+  host: localhost
 
 logger:
   default: warning
@@ -44,7 +43,7 @@ tts:
   - platform: google
 
 mqtt:
-  broker: mqtt
+  broker: localhost
 
 media_player:
   - platform: samsungtv
@@ -100,5 +99,3 @@ automation: !include automations.yaml
 group: !include groups.yaml
 sensor: !include sensor.yaml
 scene: !include scene.yaml
-
-
