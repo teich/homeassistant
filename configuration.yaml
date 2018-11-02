@@ -11,16 +11,20 @@ homeassistant:
 
 frontend:
 config:
-updater:
-  include_used_components: true
-# discovery:
 conversation:
 history:
 logbook:
 map:
 sun:
 ios:
+# discovery:
+
+updater:
+  include_used_components: true
+
 influxdb:
+  host: influxdb
+
 logger:
   default: warning
 
@@ -28,6 +32,7 @@ wemo:
   static:
     - 192.168.1.225
     - 192.168.1.238
+    - 192.168.1.90
 
 http:
   api_password: !secret api_password
@@ -39,7 +44,7 @@ tts:
   - platform: google
 
 mqtt:
-  broker: localhost
+  broker: mqtt
 
 media_player:
   - platform: samsungtv
