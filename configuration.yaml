@@ -97,20 +97,8 @@ device_tracker:
 homekit: !include homekit.yaml
 cloud: !include cloud.yaml
 automation: !include automations.yaml
-light: !include lights.yaml
-switch: !include switches.yaml
 group: !include groups.yaml
-script: !include scripts.yaml
 sensor: !include sensor.yaml
 scene: !include scene.yaml
 
-binary_sensor:
-  - platform: mqtt
-    name: "WC Motion"
-    state_topic: 'insteon/4a.60.a2/state'
-    device_class: 'motion'
 
-  - platform: mqtt
-    name: "WC battery"
-    state_topic: 'insteon/4a.60.a2/low_battery'
-    device_class: 'battery'
