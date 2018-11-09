@@ -11,6 +11,16 @@ switch:
     name: 'Master Fan'
     icon: mdi:fan
 
+  - platform: mqtt
+    state_topic: 'insteon/3e.ba.98/state'
+    command_topic: 'insteon/3e.ba.98/set'
+    name: 'Beckett Remote'
+
+  - platform: mqtt
+    state_topic: 'insteon/4e.43.95/state'
+    command_topic: 'insteon/4e.43.95/set'
+    name: 'Backyard Fountain'
+
 light:
   - platform: mqtt_json
     name: "Living Room"
@@ -139,4 +149,14 @@ binary_sensor:
   - platform: mqtt
     name: "WC battery"
     state_topic: 'insteon/4a.60.a2/low_battery'
+    device_class: 'battery'
+
+  - platform: mqtt
+    name: "Washing Machine Door"
+    state_topic: 'insteon/3e.ba.98/state'
+    device_class: 'motion'
+
+  - platform: mqtt
+    name: "Washing Machine Door Low Battery"
+    state_topic: 'insteon/3e.ba.98/low_battery'
     device_class: 'battery'
