@@ -125,10 +125,10 @@ light:
     command_topic: 'insteon/3d.28.3c/set'
     name: 'Laundry'
 
-  - platform: mqtt
-    state_topic: 'insteon/3d.2a.c9/state'
-    command_topic: 'insteon/3d.2a.c9/set'
-    name: 'Master Bathroom'
+  # - platform: mqtt
+  #   state_topic: 'insteon/3d.2a.c9/state'
+  #   command_topic: 'insteon/3d.2a.c9/set'
+  #   name: 'UNUSED'
 
   - platform: mqtt
     state_topic: 'insteon/3d.2a.f3/state'
@@ -139,6 +139,12 @@ light:
     state_topic: 'insteon/3d.2d.32/state'
     command_topic: 'insteon/3d.2d.32/set'
     name: 'Upstairs Patio Door'
+
+  - platform: mqtt_json
+    name: 'Master Bathroom'
+    state_topic: "insteon/49.51.52/state"
+    command_topic: "insteon/49.51.52/level"
+    brightness: true
 
 binary_sensor:
   - platform: mqtt

@@ -265,8 +265,6 @@ automation:
         to: 'home'
         for:
           minutes: 2
-      - platform: time
-        after: '08:45:00'
     condition:
       condition: and
       conditions:
