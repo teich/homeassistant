@@ -256,12 +256,7 @@ automation:
         for:
           minutes: 1
       - platform: state
-        entity_id: device_tracker.oren
-        to: 'home'
-        for:
-          minutes: 2
-      - platform: state
-        entity_id: device_tracker.olivia
+        entity_id: group.household
         to: 'home'
         for:
           minutes: 2
@@ -272,7 +267,7 @@ automation:
           before: '22:30:00'
           after: '08:30:00'
         - condition: state
-          entity_id: group.people
+          entity_id: group.household
           state: 'home'
         - condition: state
           entity_id: input_select.washing_machine_status
@@ -287,12 +282,8 @@ automation:
             {% endif %}
     action:
       - service_template: >
-          {% if (is_state('device_tracker.oren', 'home')) and (is_state('device_tracker.olivia', 'home'))  %}
-            notify.oren_and_olivia
-          {% elif is_state('device_tracker.oren', 'home') %}
-            notify.oren
-          {% elif is_state('device_tracker.olivia', 'home') %}
-            notify.olivia
+          {% if (is_state('group.household', 'home'))  %}
+            notify.notify
           {% endif %}
         data:
           message: 'Hey, the washing machine has finished and is ready to be emptied'
