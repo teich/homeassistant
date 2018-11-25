@@ -59,6 +59,7 @@ downstairs:
     - light.downstairs_side_outside_2
     - climate.guest_bedroom
     - light.backyard
+    - switch.backyard_fountain
 
 Garage:
   entities:

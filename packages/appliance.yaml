@@ -37,7 +37,6 @@ input_select:
     options:
       - Dirty
       - Running
-      - Drying
       - Clean
     initial: Dirty
   washing_machine_status:
@@ -45,7 +44,6 @@ input_select:
     options:
       - Idle
       - Running
-      - Finishing
       - Clean
     initial: Idle
   dryer_status:
@@ -53,7 +51,6 @@ input_select:
     options:
       - Idle
       - Running
-      - Tumbling
       - Done
     initial: Idle
 
@@ -141,23 +138,6 @@ automation:
           entity_id: input_select.dishwasher_status
           option: Running
 
-  - alias: Set dishwasher drying when power drops
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.dishwasher_power
-        below: 10
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: input_select.dishwasher_status
-          state: Running
-    action:
-      - service: input_select.select_option
-        data:
-          entity_id: input_select.dishwasher_status
-          option: Drying
-
   - alias: Set dishwasher clean
     trigger:
       - platform: state
@@ -203,25 +183,6 @@ automation:
         - condition: state
           entity_id: input_select.washing_machine_status
           state: Running
-    action:
-      - service: input_select.select_option
-        data:
-          entity_id: input_select.washing_machine_status
-          option: Finishing
-
-  - alias: Set washing machine done
-    trigger:
-      - platform: state
-        entity_id: input_select.washing_machine_status
-        to: Finishing
-        for:
-          minutes: 8
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: input_select.washing_machine_status
-          state: Finishing
     action:
       - service: input_select.select_option
         data:
@@ -300,3 +261,20 @@ automation:
         data:
           entity_id: input_select.dryer_status
           option: Running
+
+  - alias: Set dryer done when power drops
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.dryer_power
+        below: 10
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_select.dryer_status
+          state: Running
+    action:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.dryer_status
+          option: Done

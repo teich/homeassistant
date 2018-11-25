@@ -20,6 +20,7 @@ switch:
     state_topic: 'insteon/4e.43.95/state'
     command_topic: 'insteon/4e.43.95/set'
     name: 'Backyard Fountain'
+    icon: mdi:water
 
 light:
   - platform: mqtt_json
