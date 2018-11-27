@@ -119,3 +119,4 @@ automation: !include automations.yaml
 group: !include groups.yaml
 sensor: !include sensor.yaml
 scene: !include scene.yaml
+weblink: !include weblinks.yaml

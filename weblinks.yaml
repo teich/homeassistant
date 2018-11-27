@@ -1,0 +1,16 @@
+entities:
+  - name: Sonarr
+    url: http://toodle.teich.network:8989
+    icon: mdi:video
+  - name: Radarr
+    url: http://toodle.teich.network:7878
+    icon: mdi:video
+  - name: Synology
+    url: https://toodle.teich.network:5001
+    icon: mdi:video
+  - name: nzbget
+    url: http://toodle.teich.network:6789
+    icon: mdi:video
+  - name: Plex    
+    url: http://toodle.teich.network:32400/web/index.html
+    icon: mdi:video

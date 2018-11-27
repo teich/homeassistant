@@ -25,6 +25,8 @@ heavy_view:
     - group.beckett_room
     - group.downstairs
     - group.patio
+    - group.docker_services
+
 
 watching:
   name: "Media"
@@ -122,3 +124,9 @@ tv:
   - media_player.living_room_apple_tv
   - media_player.samsung_tv_remote
 
+Docker Services:
+  - weblink.sonarr
+  - weblink.radarr
+  - weblink.nzbget
+  - weblink.plex
+  - weblink.synology
