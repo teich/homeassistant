@@ -94,17 +94,17 @@ panel_iframe:
     url: 'http://toodle.local:3000'
     icon: mdi:chart-areaspline
 
-apple_tv:
-  - name: Living Room Apple TV
-    host: 192.168.1.236
-    login_id: !secret atv_login_id
-    credentials: !secret atv_credentials
+# apple_tv:
+#   - name: Living Room Apple TV
+#     host: 192.168.1.236
+#     login_id: !secret atv_login_id
+#     credentials: !secret atv_credentials
 
-media_player:
-  - platform: samsungtv
-    host: 192.168.1.208
-    port: 8002
-    mac: 64:1C:B0:7D:0C:1E
+# media_player:
+#   - platform: samsungtv
+#     host: 192.168.1.208
+#     port: 8002
+#     mac: 64:1C:B0:7D:0C:1E
 
 device_tracker:
   - platform: unifi

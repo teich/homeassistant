@@ -157,3 +157,32 @@ binary_sensor:
     name: "WC battery"
     state_topic: 'insteon/4a.60.a2/low_battery'
     device_class: 'battery'
+
+automation:
+  - alias: "Dim bedroom LED brightness at night"
+    trigger:
+      platform:  time
+      at: '22:00:00'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'insteon/command/3b.c0.fd'
+          payload: { \"cmd\" : \"set_flags\", \"backlight\" : \"0x15\" }
+      - service: mqtt.publish
+        data_template:
+          topic: 'insteon/command/3d.23.c2'
+          payload: { \"cmd\" : \"set_flags\", \"backlight\" : \"0x15\" }
+
+  - alias: 'Make bedroom LED brightness full in AM'
+    trigger:
+      platform:  time
+      at: '06:00:00'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'insteon/command/3b.c0.fd'
+          payload: { \"cmd\" : \"set_flags\", \"backlight\" : \"0xff\" }
+      - service: mqtt.publish
+        data_template:
+          topic: 'insteon/command/3d.23.c2'
+          payload: { \"cmd\" : \"set_flags\", \"backlight\" : \"0xff\" }
