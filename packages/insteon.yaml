@@ -23,69 +23,80 @@ switch:
     icon: mdi:water
 
 light:
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: "Living Room"
     state_topic: "insteon/3b.c2.f9/state"
     command_topic: "insteon/3b.c2.f9/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Stairs'
     state_topic: "insteon/3c.f3.e7/state"
     command_topic: "insteon/3c.f3.e7/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Thunder'
     state_topic: "insteon/35.85.7c/state"
     command_topic: "insteon/35.85.7c/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Kitchen Island'
     state_topic: "insteon/3b.af.d3/state"
     command_topic: "insteon/3b.af.d3/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Downstairs Hallway'
     state_topic: "insteon/3b.b4.d4/state"
     command_topic: "insteon/3b.b4.d4/level"
     brightness: true
     unique_id: 'down_hall'
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Master Overhead'
     state_topic: "insteon/3b.c0.fd/state"
     command_topic: "insteon/3b.c0.fd/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Kitchen Overhead'
     state_topic: "insteon/3b.c6.b4/state"
     command_topic: "insteon/3b.c6.b4/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Lilies'
     state_topic: "insteon/3b.cb.8b/state"
     command_topic: "insteon/3b.cb.8b/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Guest Bathroom'
     state_topic: "insteon/3c.de.52/state"
     command_topic: "insteon/3c.de.52/level"
     brightness: true
     unique_id: 'down_guest_bath'
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Beckett Overhead'
     state_topic: "insteon/3d.0e.6a/state"
     command_topic: "insteon/3d.0e.6a/level"
     brightness: true
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Bamboo Overhead'
     state_topic: "insteon/3d.16.4c/state"
     command_topic: "insteon/3d.16.4c/level"
@@ -141,7 +152,8 @@ light:
     command_topic: 'insteon/3d.2d.32/set'
     name: 'Upstairs Patio Door'
 
-  - platform: mqtt_json
+  - platform: mqtt
+    schema: json
     name: 'Master Bathroom'
     state_topic: "insteon/49.51.52/state"
     command_topic: "insteon/49.51.52/level"
