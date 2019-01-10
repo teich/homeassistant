@@ -2,6 +2,15 @@ filter:
   include_entities:
     - switch.master_fan  # Master Fan
     - switch.backyard # backyard lights
+    - light.thunder 
+    - light.lilies 
+    - light.stairs 
+    - light.living_room 
+    - light.backyard
+    - light.kitchen_island 
+    - light.kitchen_overhead 
+    - light.kitchen_cabinets
+    - light.master_overhead
 
 entity_config:
   switch.master_fan:
