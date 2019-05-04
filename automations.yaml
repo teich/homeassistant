@@ -1,4 +1,5 @@
 - alias: Turn on WC light and fan when there is movement
+  initial_state: true
   trigger:
     platform: state
     entity_id: binary_sensor.wc_motion
@@ -14,6 +15,7 @@
       entity_id: timer.wc
 
 - alias: Turn off WC 10 minutes after last movement
+  initial_state: true
   trigger:
     platform: event
     event_type: timer.finished
@@ -27,6 +29,7 @@
         - switch.wc_fan 
 
 - alias: Low battery front door alert
+  initial_state: true
   trigger:
     platform: numeric_state
     entity_id: sensor.front_door_battery
@@ -40,7 +43,21 @@
           push:
             badge: 0
 
-- alias: Sunset Lights
+# ----------------------------------
+# SUNSET ACTIONS
+# ----------------------------------
+- alias: "Sunset Always"
+  initial_state: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:10:00"
+  action:
+    service: light.turn_on
+    entity_id: light.front_steps
+
+- alias: Sunset Home
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -53,7 +70,22 @@
     service: homeassistant.turn_on
     entity_id: light.living_room
 
+# ----------------------------------
+# Middle Night Actions
+# ----------------------------------
+
+- alias: "front steps off"
+  initial_state: true
+  trigger:
+    platform: time
+    at: "23:30:00"
+  action:
+    service: light.turn_off
+    entity_id: light.front_steps
+
+
 - alias: "Lights when coming home"
+  initial_state: true
   trigger:
     platform: state
     entity_id: group.household

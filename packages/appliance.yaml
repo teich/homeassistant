@@ -209,46 +209,46 @@ automation:
           entity_id: input_select.washing_machine_status
           option: Idle
 
-  - alias: Send alert when washing machine is finished
-    trigger:
-      - platform: state
-        entity_id: sensor.washing_machine_status
-        to: Clean
-        for:
-          minutes: 1
-      - platform: state
-        entity_id: group.household
-        to: 'home'
-        for:
-          minutes: 2
-    condition:
-      condition: and
-      conditions:
-        - condition: time
-          before: '22:30:00'
-          after: '08:30:00'
-        - condition: state
-          entity_id: group.household
-          state: 'home'
-        - condition: state
-          entity_id: input_select.washing_machine_status
-          state: Clean
-        - condition: template
-          value_template: >
-            {% if states.automation.send_alert_when_washing_machine_is_finished.last_triggered is not none %}
-              {% if as_timestamp(now()) | int   -  as_timestamp(states.automation.send_alert_when_washing_machine_is_finished.attributes.last_triggered) | int > 1800 %} true {% else %} false
-              {% endif %}
-            {% else %}
-            false
-            {% endif %}
-    action:
-      - service_template: >
-          {% if (is_state('group.household', 'home'))  %}
-            notify.notify
-          {% endif %}
-        data:
-          message: 'Hey, the washing machine has finished and is ready to be emptied'
-          title: 'Washing Machine'
+  # - alias: Send alert when washing machine is finished
+  #   trigger:
+  #     - platform: state
+  #       entity_id: sensor.washing_machine_status
+  #       to: Clean
+  #       for:
+  #         minutes: 1
+  #     - platform: state
+  #       entity_id: group.household
+  #       to: 'home'
+  #       for:
+  #         minutes: 2
+  #   condition:
+  #     condition: and
+  #     conditions:
+  #       - condition: time
+  #         before: '22:30:00'
+  #         after: '08:30:00'
+  #       - condition: state
+  #         entity_id: group.household
+  #         state: 'home'
+  #       - condition: state
+  #         entity_id: input_select.washing_machine_status
+  #         state: Clean
+  #       - condition: template
+  #         value_template: >
+  #           {% if states.automation.send_alert_when_washing_machine_is_finished.last_triggered is not none %}
+  #             {% if as_timestamp(now()) | int   -  as_timestamp(states.automation.send_alert_when_washing_machine_is_finished.attributes.last_triggered) | int > 1800 %} true {% else %} false
+  #             {% endif %}
+  #           {% else %}
+  #           false
+  #           {% endif %}
+  #   action:
+  #     - service_template: >
+  #         {% if (is_state('group.household', 'home'))  %}
+  #           notify.notify
+  #         {% endif %}
+  #       data:
+  #         message: 'Hey, the washing machine has finished and is ready to be emptied'
+  #         title: 'Washing Machine'
 
 
   - alias: "Set dryer active when power detected"

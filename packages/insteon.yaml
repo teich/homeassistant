@@ -159,6 +159,11 @@ light:
     command_topic: "insteon/49.51.52/level"
     brightness: true
 
+  - platform: mqtt
+    state_topic: 'insteon/4c.e4.cf/state'
+    command_topic: 'insteon/4c.e4.cf/set'
+    name: 'Front Steps'
+
 binary_sensor:
   - platform: mqtt
     name: "WC Motion"

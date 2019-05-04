@@ -21,22 +21,22 @@ ios:
 recorder:
   purge_keep_days: 5
   purge_interval: 1
-  exclude:
-    domains:
-      - updater
-      - camera
-      - media_player
-      - sun
-      - zone
-      - group
-      - automation
-      - calendar
-  include:
-    domains:
-      - climate
-      - cover
-      - sensor
-      - binary_sensor
+  # exclude:
+  #   domains:
+  #     - updater
+  #     - camera
+  #     - media_player
+  #     - sun
+  #     - zone
+  #     - group
+  #     - automation
+  #     - calendar
+  # include:
+  #   domains:
+  #     - climate
+  #     - cover
+  #     - sensor
+  #     - binary_sensor
 
 updater:
   include_used_components: true
@@ -55,7 +55,7 @@ wemo:
 
 http:
   api_password: !secret api_password
-  base_url: https://teich.network:8123
+  base_url: https://toodle.teich.network:8123
   ssl_certificate: /certificates/fullchain.pem 
   ssl_key: /certificates/privkey.pem
 

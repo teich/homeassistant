@@ -96,6 +96,7 @@ main_floor:
     - climate.living_room
     - sensor.front_door_battery
     - lock.front_door
+    - light.front_steps
 
 master:
   name: Master Bedroom
@@ -115,11 +116,11 @@ patio:
     - light.upstairs_patio_seat
 
 household:
-  - device_tracker.orensiphone
+  - device_tracker.orens_iphone
+  # - device_tracker.oren-iphone
   - device_tracker.oliviasx
   - device_tracker.olivia
-  - device_tracker.orens_iphone
-
+  
 tv:
   - media_player.living_room_apple_tv
   - media_player.samsung_tv_remote
