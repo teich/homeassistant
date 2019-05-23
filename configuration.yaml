@@ -1,122 +1,57 @@
 homeassistant:
+  # Name of the location where Home Assistant is running
   name: Home
-  latitude: !secret latitude
-  longitude: !secret longitude
+  # Location required to calculate the time the sun rises and sets
+  latitude: 37.7595
+  longitude: -122.4367
+  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
+  # metric for Metric, imperial for Imperial
   unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Los_Angeles
+  # Customization file
   customize: !include customize.yaml
-  packages: !include_dir_named packages
 
-frontend:
-config:
-conversation:
-history:
-logbook:
-map:
-sun:
-ios:
-# discovery:
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
 
-recorder:
-  purge_keep_days: 5
-  purge_interval: 1
-  # exclude:
-  #   domains:
-  #     - updater
-  #     - camera
-  #     - media_player
-  #     - sun
-  #     - zone
-  #     - group
-  #     - automation
-  #     - calendar
-  # include:
-  #   domains:
-  #     - climate
-  #     - cover
-  #     - sensor
-  #     - binary_sensor
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
 
-updater:
-  include_used_components: true
+# Discover some devices automatically
+discovery:
 
-influxdb:
-  host: localhost
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
 
-logger:
-  default: warning
-
-wemo:
-  static:
-    - 192.168.1.225
-    - 192.168.1.238
-    - 192.168.1.90
-
-http:
-  api_password: !secret api_password
-  base_url: https://toodle.teich.network:8123
-  ssl_certificate: /certificates/fullchain.pem 
-  ssl_key: /certificates/privkey.pem
-
+# Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
 
-mqtt:
-  broker: localhost
+# nest:
+#   client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
+#   client_secret: !secret nest_client_secret
 
 august:
   login_method: email
-  username: oren@teich.net
+  username: !secret august_username
   password: !secret august_password
-
-timer:
-  wc:
-    duration: '00:10:00'
 
 cover:
   - platform: myq
-    username: oren@teich.net
+    username: !secret myq_username
     password: !secret myq_password
     type: chamberlain
 
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
-  
-weather:
-  - platform: darksky
-    api_key: !secret darksky_api_key
+lutron:
+  host: 192.168.1.181
+  username: !secret lutron_username
+  password: !secret lutron_password
 
-panel_iframe:
-  grafana:
-    title: 'Grafana'
-    url: 'http://toodle.local:3000'
-    icon: mdi:chart-areaspline
-
-# apple_tv:
-#   - name: Living Room Apple TV
-#     host: 192.168.1.236
-#     login_id: !secret atv_login_id
-#     credentials: !secret atv_credentials
-
-# media_player:
-#   - platform: samsungtv
-#     host: 192.168.1.208
-#     port: 8002
-#     mac: 64:1C:B0:7D:0C:1E
-
-device_tracker:
-  - platform: unifi
-    host: 192.168.1.100
-    username: !secret unifi_user
-    password: !secret unifi_password
-    verify_ssl: false   
-
-homekit: !include homekit.yaml
-cloud: !include cloud.yaml
-automation: !include automations.yaml
 group: !include groups.yaml
-sensor: !include sensor.yaml
-scene: !include scene.yaml
-weblink: !include weblinks.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
