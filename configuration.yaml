@@ -1,40 +1,34 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: 37.7595
   longitude: -122.4367
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
-  # metric for Metric, imperial for Imperial
   unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Los_Angeles
-  # Customization file
   customize: !include customize.yaml
+  customize_glob:
+    "binary_sensor.*":
+      hidden: true
+    "sensor.*":
+      hidden: true
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
 
-# Discover some devices automatically
 discovery:
 
-# Sensors
 sensor:
-  # Weather prediction
   - platform: yr
 
-# Text to speech
-tts:
-  - platform: google_translate
+#tts:
+#  - platform: google_translate
 
-# nest:
-#   client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
-#   client_secret: !secret nest_client_secret
+nest:
+  client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
+  client_secret: !secret nest_client_secret
 
 august:
   login_method: email
