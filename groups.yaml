@@ -1,8 +1,46 @@
+default_view:
+  view: true
+  icon: mdi:home
+  entities:
+    - group.master_bedroom
+    - scene.bedtime
+    - scene.morning
+    - scene.sleep
+
+downstairs:
+  name: Downstairs
+  view: yes
+  entities:
+    - group.entry
+    - group.guest_bedroom
+    - group.wine
+    - group.garage
+    
+main:
+  name: Main Floor
+  view: yes
+  entities:
+    - group.dining
+    - group.kitchen
+    - group.landing
+    - group.laundry
+    - group.living
+
+upstairs:
+  name: Upstairs
+  view: yes
+  entities:
+    - group.office
+    - group.beckett_room
+    - group.master_bedroom
+    - group.master_bathroom
+
 office:
   name: Office
   entities:
     - light.office_stair_landing_office_cans
     - light.office_stair_landing_stair_hall_cans
+    - media_player.office
 
 beckett_room:
   name: Beckett's Room
@@ -13,6 +51,7 @@ beckett_room:
     - light.bed_2_bed_2_cans
     - light.bed_2_bed_2_closet_cans
     - light.bed_2_bed_2_lamp
+    - media_player.becketts_room
 
 master_bedroom:
   name: Master Bedroom
@@ -25,6 +64,7 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+    - media_player.master_bedroom
 
 master_bathroom:
   name: Master Bathroom
@@ -34,6 +74,7 @@ master_bathroom:
     - light.master_bath_closet_m_bath_pendant
     - light.master_bath_closet_m_closet_cans
     - light.master_bath_closet_m_closet_towel_warmer
+    - media_player.master_bath
 
 exterior:
   name: Outside
@@ -44,6 +85,7 @@ exterior:
     - light.living_room_stair_up_exterior_deck_can
     - light.master_bed_exterior_deck_sconce
     - light.office_stair_landing_exterior_deck_step_lights
+    - media_player.outside
 
 landing:
   entities:
@@ -55,6 +97,7 @@ dining:
     - light.dining_room_stair_down_dining_room_lamp
     - light.dining_room_stair_down_dining_table_pendant
     - light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2
+    - media_player.dining_room
 
 entry:
   entities:
@@ -82,6 +125,8 @@ kitchen:
     - light.kitchen_breakfast_nook_kitchen_field_cans
     - light.kitchen_breakfast_nook_kitchen_island_pendant
     - light.kitchen_breakfast_nook_kitchen_under_cab
+    - climate.kitchen
+    - media_player.kitchen
 
 laundry:
   name: Laundry & Powder Room
@@ -92,16 +137,23 @@ laundry:
     - light.powder_room_powder_room_pendant
     - light.powder_room_powder_room_can
 
-main:
-  name: Main Floor
+living:
+  name: Living Room
   entities:
     - light.living_room_stair_up_art_wall_lights
     - light.living_room_stair_up_hall_cans_x_8
     - light.living_room_stair_up_piano_wall_stair_up_cans
     - light.living_room_stair_up_tv_wall_cans
+    - climate.living_room
+    - media_player.media
 
 wine:
   name: Wine Cellar
   entities:
     - light.wine_cellar_wine_cellar_cans
     - light.wine_cellar_wine_cellar_pendant
+
+garage:
+  name: Garage
+  entities: 
+    - camera.garage
