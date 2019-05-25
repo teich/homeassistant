@@ -3,11 +3,11 @@ light.back_deck_exterior_cans:
 light.dining_room_stair_down_top_of_stair_sconce_nook_lights:
   friendly_name: White Art Light
 light.dining_room_stair_down_dining_room_art_cans:
-  friendly_name: Dining Cans
+  friendly_name: Cans
 light.dining_room_stair_down_dining_room_lamp:
-  friendly_name: Dining Lamp
+  friendly_name: Floor Lamp
 light.dining_room_stair_down_dining_table_pendant:
-  friendly_name: Dining Chandelier
+  friendly_name: Chandelier
 light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2:
   friendly_name: Long Cans
 light.living_room_stair_up_tv_wall_cans:
