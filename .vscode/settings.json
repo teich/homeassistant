@@ -2,5 +2,8 @@
     "files.exclude": {
         "*.db": true,
         "*.log": true
+    },
+    "files.associations": {
+        "*.yaml": "home-assistant"
     }
 }
