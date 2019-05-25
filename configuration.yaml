@@ -49,5 +49,5 @@ lutron:
 group: !include groups.yaml
 script: !include scripts.yaml
 scene: !include_dir_list scenes
-# automation: !include_dir_list automations
-automation: !include automations.yaml
+automation: !include_dir_merge_list automation
+# automation: !include automations.yaml

@@ -1,0 +1,33 @@
+- id: sunset-bedroom
+  alias: 'Turn Bedroom to night mode'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  condition:
+    - condition: time
+      after: '16:00:00'
+      before: '23:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.bedtime
+
+- id: weekday-wakeup
+  alias: "Master Weekday Wakeup"
+  trigger:
+    platform: time
+    at: '07:00:00'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: device_tracker.oren
+      state: home
+  action:
+    - service: scene.turn_on
+      entity_id: scene.morning
