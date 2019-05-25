@@ -1,1 +1,23 @@
-[]
+- id: front-steps-off
+  alias: 'Front Steps Off'
+  initial_state: 'on'
+  trigger:
+  - platform: time
+    at: '23:30:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.entry_hall_front_step_lights
+
+- id: front-steps-on
+  alias: 'Front Steps on at Sunset'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  condition:
+    - condition: time
+      after: '16:00:00'
+      before: '23:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.entry_hall_front_step_lights

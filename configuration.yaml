@@ -47,6 +47,7 @@ lutron:
   password: !secret lutron_password
 
 group: !include groups.yaml
-automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include_dir_list scenes
+# automation: !include_dir_list automations
+automation: !include automations.yaml
