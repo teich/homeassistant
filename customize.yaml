@@ -13,6 +13,11 @@ light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2:
 light.living_room_stair_up_tv_wall_cans:
   friendly_name: Wall Lights
 
+light.kitchen_breakfast_nook_kitchen_exterior:
+  friendly_name: Backyard stair lights
+light.living_room_stair_up_exterior_deck_can:
+  friendly_name: Fake Front Door Light
+
 ## Entry
 light.entry_hall_front_step_lights:
   friendly_name: Front Steps
