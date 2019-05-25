@@ -1,10 +1,10 @@
 - name: Bedtime
   entities:
-    cover.master_bed_bed_corner_window: close
-    cover.master_bed_deck_blackout: close
-    cover.master_bed_deck_sheer: close
-    cover.master_bed_tv_window_left: close
-    cover.master_bed_tv_window_right: close
+    cover.master_bed_bed_corner_window: closed
+    cover.master_bed_deck_blackout: closed
+    cover.master_bed_deck_sheer: closed
+    cover.master_bed_tv_window_left: closed
+    cover.master_bed_tv_window_right: closed
     light.master_bed_m_bed_cans: off
     light.master_bed_m_bed_lamp_left: on
     light.master_bed_m_bed_lamp_right: on

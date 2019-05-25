@@ -47,14 +47,19 @@ light.office_stair_landing_office_cans:
 ## Master Bedroom
 cover.master_bed_bed_corner_window:
   friendly_name: Bed Window
+  device_class: shade
 cover.master_bed_deck_blackout:
   friendly_name: Blackout
+  device_class: curtain
 cover.master_bed_deck_sheer:
   friendly_name: Sheer
+  device_class: curtain
 cover.master_bed_tv_window_left:
   friendly_name: Left Window
+  device_class: shade
 cover.master_bed_tv_window_right:
   friendly_name: Right Window
+  device_class: shade
 light.master_bed_m_bed_cans:
   friendly_name: Cans
 light.master_bed_m_bed_lamp_left:
