@@ -25,9 +25,9 @@
         - wed
         - thu
         - fri
-    # - condition: state
-    #   entity_id: device_tracker.oren
-    #   state: home
+    - condition: state
+      entity_id: group.family
+      state: home
   action:
     service: scene.turn_on
     entity_id: scene.morning

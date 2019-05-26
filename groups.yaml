@@ -105,7 +105,6 @@ entry:
     - light.entry_hall_entry_lamp
     - light.entry_hall_entry_led_cove
     - light.entry_hall_stair_down_enytry_lights
-    - light.entry_hall_front_step_lights
     - lock.front_door
 
 guest_bedroom:
@@ -159,3 +158,10 @@ garage:
   entities: 
     - camera.garage
     - cover.30th_garage_door
+
+family:
+  name: Family People
+  view: false
+  entities:
+    - person.oren_teich
+    - person.olivia_teich
