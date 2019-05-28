@@ -18,7 +18,7 @@ default_config:
 # http:
 #   base_url: example.duckdns.org:8123
 
-discovery
+discovery:
 
 nest:
   client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
