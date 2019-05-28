@@ -46,6 +46,10 @@ lutron:
   username: !secret lutron_username
   password: !secret lutron_password
 
+binary_sensor:
+  - platform: workday
+    country: US
+
 group: !include groups.yaml
 script: !include scripts.yaml
 scene: !include_dir_list scenes
