@@ -1,0 +1,9 @@
+filter:
+  include_entities:
+    - light.master_bed_m_bed_lamp_left
+    - light.master_bed_m_bed_lamp_right
+  entity_config:
+    light.master_bed_m_bed_lamp_left:
+      name: "Oren Bedside"
+    light.master_bed_m_bed_lamp_right:
+      name: "Olivia Bedside"
