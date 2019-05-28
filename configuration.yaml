@@ -20,12 +20,6 @@ default_config:
 
 discovery:
 
-sensor:
-  - platform: yr
-
-#tts:
-#  - platform: google_translate
-
 nest:
   client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
   client_secret: !secret nest_client_secret
