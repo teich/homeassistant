@@ -1,0 +1,5 @@
+steps:
+- name: 'ubuntu'
+  args: ['cp', 'secrets_ci.yaml', 'secrets.yaml']
+- name: 'homeassistant/amd64-homeassistant'
+  args: ['hass', '--script', 'check_config', '-c', '.']
