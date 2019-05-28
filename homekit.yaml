@@ -2,6 +2,9 @@ filter:
   include_entities:
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+    - cover.30th_garage_door
+    - scene.morning
+    - scene.sleep
 entity_config:
   light.master_bed_m_bed_lamp_left:
     name: "Oren Bedside"
