@@ -1,122 +1,57 @@
 homeassistant:
   name: Home
-  latitude: !secret latitude
-  longitude: !secret longitude
+  latitude: !secret lat
+  longitude: !secret long
   elevation: 0
   unit_system: imperial
   time_zone: America/Los_Angeles
   customize: !include customize.yaml
-  packages: !include_dir_named packages
+  customize_glob:
+    "binary_sensor.*":
+      hidden: true
+    "sensor.*":
+      hidden: true
 
-frontend:
-config:
-conversation:
-history:
-logbook:
-map:
-sun:
-ios:
-# discovery:
+default_config:
 
-recorder:
-  purge_keep_days: 5
-  purge_interval: 1
-  exclude:
-    domains:
-      - updater
-      - camera
-      - media_player
-      - sun
-      - zone
-      - group
-      - automation
-      - calendar
-  include:
-    domains:
-      - climate
-      - cover
-      - sensor
-      - binary_sensor
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
 
-updater:
-  include_used_components: true
+discovery:
 
-influxdb:
-  host: localhost
+sensor:
+  - platform: yr
 
-logger:
-  default: warning
+#tts:
+#  - platform: google_translate
 
-wemo:
-  static:
-    - 192.168.1.225
-    - 192.168.1.238
-    - 192.168.1.90
-
-http:
-  api_password: !secret api_password
-  base_url: https://teich.network:8123
-  ssl_certificate: /certificates/fullchain.pem 
-  ssl_key: /certificates/privkey.pem
-
-tts:
-  - platform: google
-
-mqtt:
-  broker: localhost
+nest:
+  client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
+  client_secret: !secret nest_client_secret
 
 august:
   login_method: email
-  username: oren@teich.net
+  username: !secret august_username
   password: !secret august_password
-
-timer:
-  wc:
-    duration: '00:10:00'
 
 cover:
   - platform: myq
-    username: oren@teich.net
+    username: !secret myq_username
     password: !secret myq_password
     type: chamberlain
 
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
-  
-weather:
-  - platform: darksky
-    api_key: !secret darksky_api_key
+lutron:
+  host: 192.168.1.181
+  username: !secret lutron_username
+  password: !secret lutron_password
 
-panel_iframe:
-  grafana:
-    title: 'Grafana'
-    url: 'http://toodle.local:3000'
-    icon: mdi:chart-areaspline
+binary_sensor:
+  - platform: workday
+    country: US
 
-# apple_tv:
-#   - name: Living Room Apple TV
-#     host: 192.168.1.236
-#     login_id: !secret atv_login_id
-#     credentials: !secret atv_credentials
-
-# media_player:
-#   - platform: samsungtv
-#     host: 192.168.1.208
-#     port: 8002
-#     mac: 64:1C:B0:7D:0C:1E
-
-device_tracker:
-  - platform: unifi
-    host: 192.168.1.100
-    username: !secret unifi_user
-    password: !secret unifi_password
-    verify_ssl: false   
-
-homekit: !include homekit.yaml
-cloud: !include cloud.yaml
-automation: !include automations.yaml
 group: !include groups.yaml
-sensor: !include sensor.yaml
-scene: !include scene.yaml
-weblink: !include weblinks.yaml
+script: !include scripts.yaml
+scene: !include_dir_list scenes
+automation: !include_dir_merge_list automation
+# automation: !include automations.yaml

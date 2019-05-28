@@ -1,0 +1,19 @@
+- id: arrive-home
+  alias: 'Turn lights on when arriving home'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: '-00:30:00'
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - condition: time
+      after: '16:30:00'
+      before: '01:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.home

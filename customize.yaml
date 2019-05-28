@@ -1,1 +1,145 @@
+light.back_deck_exterior_cans:
+  friendly_name: Back Deck
+light.dining_room_stair_down_top_of_stair_sconce_nook_lights:
+  friendly_name: White Art Light
+light.dining_room_stair_down_dining_room_art_cans:
+  friendly_name: Cans
+light.dining_room_stair_down_dining_room_lamp:
+  friendly_name: Floor Lamp
+light.dining_room_stair_down_dining_table_pendant:
+  friendly_name: Chandelier
+light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2:
+  friendly_name: Long Cans
+light.living_room_stair_up_tv_wall_cans:
+  friendly_name: Wall Lights
 
+light.kitchen_breakfast_nook_kitchen_exterior:
+  friendly_name: Backyard stair lights
+light.living_room_stair_up_exterior_deck_can:
+  friendly_name: Fake Front Door Light
+
+## Entry
+light.entry_hall_front_step_lights:
+  friendly_name: Front Steps
+light.entry_hall_entry_lamp:
+  friendly_name: Entry Lamp
+light.entry_hall_entry_led_cove:
+  friendly_name: Entry Cove 
+light.entry_hall_stair_down_enytry_lights:
+  friendly_name: Entry Lights
+
+## Beckett
+light.bath_2_bath_2_cans:
+  friendly_name: Bathroom Cans
+light.bath_2_bath_2_fan:
+  icon: mdi:fan
+  friendly_name: Bathroom Fan
+light.bath_2_bath_2_pendant:
+  friendly_name: Bathroom Pendant
+light.bed_2_bed_2_cans:
+  friendly_name: Bedroom Cans
+light.bed_2_bed_2_closet_cans:
+  friendly_name: Closet
+light.bed_2_bed_2_lamp:
+  friendly_name: Beckett Bedside Lamp
+
+## Upstairs Landing
+light.office_stair_landing_stair_hall_cans:
+  friendly_name: Upstairs Hall Cans
+light.office_stair_landing_office_cans:
+  friendly_name: Office Cans
+
+## Master Bedroom
+cover.master_bed_bed_corner_window:
+  friendly_name: Bed Window
+  device_class: shade
+cover.master_bed_deck_blackout:
+  friendly_name: Blackout
+  device_class: curtain
+cover.master_bed_deck_sheer:
+  friendly_name: Sheer
+  device_class: curtain
+cover.master_bed_tv_window_left:
+  friendly_name: Left Window
+  device_class: shade
+cover.master_bed_tv_window_right:
+  friendly_name: Right Window
+  device_class: shade
+light.master_bed_m_bed_cans:
+  friendly_name: Cans
+light.master_bed_m_bed_lamp_left:
+  friendly_name: Oren's Bedside Lamp
+light.master_bed_m_bed_lamp_right:
+  friendly_name: Olivia's Bedside Lamp
+
+## Master Bathroom
+light.master_bath_closet_m_bath_cans:
+  friendly_name: Cans
+light.master_bath_closet_m_bath_fan:
+  icon: mdi:fan
+  friendly_name: Fan
+light.master_bath_closet_m_bath_pendant:
+  friendly_name: Pendant
+light.master_bath_closet_m_closet_cans:
+  friendly_name: Closet
+light.master_bath_closet_m_closet_towel_warmer:
+  icon: mdi:radiator-disabled
+  friendly_name: Towel Warmer
+
+## Kitchen
+light.kitchen_breakfast_nook_breakfast_nook_cans:
+  friendly_name: Kitchen Table
+light.kitchen_breakfast_nook_kitchen_art_wall_powder_hall_cans:
+  friendly_name: Wall Cans
+light.kitchen_breakfast_nook_kitchen_bar_light:
+  friendly_name: Bar
+light.kitchen_breakfast_nook_kitchen_field_cans:
+  friendly_name: Cans
+light.kitchen_breakfast_nook_kitchen_island_pendant:
+  friendly_name: Islands
+light.kitchen_breakfast_nook_kitchen_under_cab:
+  friendly_name: Under Cabinet
+light.laundry_room_laundry_fan:
+  friendly_name: Laundry Fan
+  icon: mdi:fan
+light.laundry_room_laundry_room:
+  friendly_name: Laundry Lights
+
+## Guest Bedroom
+light.guest_bath_bath_3_cans:
+  friendly_name: Bathroom Cans
+light.guest_bath_bath_3_penndant:
+  friendly_name: Bathroom Pendant
+light.guest_bath_bath_3_towel_warmer:
+  friendly_name: Towel Warmer
+  icon: mdi:radiator-disabled
+light.guest_bath_guest_bath_fan:
+  friendly_name: Fan
+  icon: mdi:fan
+light.guest_bed_guest_bed_cans:
+  friendly_name: Cans
+
+## Main Floor
+light.living_room_stair_up_art_wall_lights:
+  friendly_name: Stairs Up
+light.living_room_stair_up_hall_cans_x_8:
+  friendly_name: Hall Cans
+light.living_room_stair_up_piano_wall_stair_up_cans:
+  friendly_name: Wall Cans 2
+light.living_room_stair_up_tv_wall_can:
+  friendly_name: TV Wall
+light.office_stair_landing_exterior_deck_step_lights:
+  friendly_name: Front Deck Lights
+light.powder_room_powder_fan:
+  friendly_name: Powder Room Fan
+  icon: mdi:fan
+light.powder_room_powder_room_can:
+  friendly_name: Powder Room Cans
+light.powder_room_powder_room_pendant:
+  friendly_name: Powder Room Pendant
+
+## Wine
+light.wine_cellar_wine_cellar_cans:
+  friendly_name: Wine Cellar Cans
+light.wine_cellar_wine_cellar_pendant:
+  friendly_name: Wine Cellar Pendant

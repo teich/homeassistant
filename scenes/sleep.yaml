@@ -1,0 +1,6 @@
+- name: Sleep
+  entities:
+    group.master_bedroom: off
+    group.master_bathroom: off
+    group.main: off
+    group.wine: off

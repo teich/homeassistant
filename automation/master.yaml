@@ -1,0 +1,50 @@
+- id: sunset-bedroom
+  alias: 'Turn Bedroom to night mode'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  condition:
+    - condition: time
+      after: '16:00:00'
+      before: '23:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.bedtime
+
+- id: weekday-wakeup
+  alias: "Master Weekday Wakeup"
+  trigger:
+    platform: time
+    at: '07:00:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
+    - condition: state
+      entity_id: group.family
+      state: home
+  action:
+    service: scene.turn_on
+    entity_id: scene.morning
+
+#####
+# Turn Master Towel On and Off
+#####
+- id: towel-on
+  alias: "Towel Warmer On"
+  trigger:
+    platform: time
+    at: '05:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.master_bath_closet_m_closet_towel_warmer
+
+- id: towel-off
+  alias: "Towel Warmer Off"
+  trigger:
+    platform: time
+    at: '08:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.master_bath_closet_m_closet_towel_warmer

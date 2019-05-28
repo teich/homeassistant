@@ -1,0 +1,6 @@
+- name: Home
+  entities:
+    light.entry_hall_entry_lamp: on
+    light.entry_hall_entry_led_cove: on
+    light.entry_hall_stair_down_enytry_lights: on
+    light.dining_room_stair_down_top_of_stair_sconce_nook_lights: on
