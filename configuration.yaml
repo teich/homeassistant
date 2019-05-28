@@ -49,3 +49,5 @@ script: !include scripts.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
 # automation: !include automations.yaml
+
+homekit: !include homekit.yaml
