@@ -40,6 +40,10 @@ lutron:
   username: !secret lutron_username
   password: !secret lutron_password
 
+sense:
+  email: !secret sense_username
+  password: !secret sense_password
+
 binary_sensor:
   - platform: workday
     country: US
