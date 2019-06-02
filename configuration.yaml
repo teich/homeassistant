@@ -20,9 +20,9 @@ default_config:
 
 discovery:
 
-nest:
-  client_id: fccdf871-403c-4a4f-8a88-275b75b2aa07
-  client_secret: !secret nest_client_secret
+#nest:
+#  client_id: !secret nest_client_id
+#  client_secret: !secret nest_client_secret
 
 august:
   login_method: email
