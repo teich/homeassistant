@@ -41,7 +41,6 @@ office:
   entities:
     - light.office_stair_landing_office_cans
     - light.office_stair_landing_stair_hall_cans
-    - media_player.office
 
 beckett_room:
   name: Beckett's Room
@@ -52,7 +51,6 @@ beckett_room:
     - light.bed_2_bed_2_cans
     - light.bed_2_bed_2_closet_cans
     - light.bed_2_bed_2_lamp
-    - media_player.becketts_room
 
 master_bedroom:
   name: Master Bedroom
@@ -65,7 +63,6 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
-    - media_player.master_bedroom
 
 master_bathroom:
   name: Master Bathroom
@@ -75,7 +72,6 @@ master_bathroom:
     - light.master_bath_closet_m_bath_pendant
     - light.master_bath_closet_m_closet_cans
     - light.master_bath_closet_m_closet_towel_warmer
-    - media_player.master_bath
 
 exterior:
   name: Outside
@@ -86,19 +82,18 @@ exterior:
     - light.living_room_stair_up_exterior_deck_can
     - light.master_bed_exterior_deck_sconce
     - light.office_stair_landing_exterior_deck_step_lights
-    - media_player.outside
 
 landing:
   entities:
     - light.dining_room_stair_down_top_of_stair_sconce_nook_lights
 
 dining:
+  name: Dining Room
   entities:
     - light.dining_room_stair_down_dining_room_art_cans
     - light.dining_room_stair_down_dining_room_lamp
     - light.dining_room_stair_down_dining_table_pendant
     - light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2
-    - media_player.dining_room
 
 entry:
   entities:
@@ -126,7 +121,6 @@ kitchen:
     - light.kitchen_breakfast_nook_kitchen_island_pendant
     - light.kitchen_breakfast_nook_kitchen_under_cab
     - climate.kitchen
-    - media_player.kitchen
 
 laundry:
   name: Laundry & Powder Room
@@ -145,7 +139,6 @@ living:
     - light.living_room_stair_up_piano_wall_stair_up_cans
     - light.living_room_stair_up_tv_wall_cans
     - climate.living_room
-    - media_player.media
 
 wine:
   name: Wine Cellar
@@ -155,6 +148,7 @@ wine:
 
 garage:
   name: Garage
+  control: hidden
   entities: 
     - camera.garage
     - cover.30th_garage_door
@@ -165,3 +159,17 @@ family:
   entities:
     - person.oren_teich
     - person.olivia_teich
+
+sonos:
+  name: sonos
+  icon: mdi:music-circle
+  view: yes
+  entities:
+    - media_player.media
+    - media_player.kitchen
+    - media_player.office
+    - media_player.becketts_room
+    - media_player.master_bedroom
+    - media_player.master_bath
+    - media_player.outside
+    - media_player.dining_room
