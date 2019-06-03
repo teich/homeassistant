@@ -2,12 +2,9 @@ default_view:
   view: true
   icon: mdi:home
   entities:
-    - group.master_bedroom
-    - scene.bedtime
-    - scene.morning
-    - scene.sleep
-    - input_boolean.party_mode
-    - lock.front_door
+    - group.main_scenes
+    - group.family
+    - group.main_controls
 
 downstairs:
   name: Downstairs
@@ -158,6 +155,7 @@ garage:
 family:
   name: Family People
   view: false
+  control: hidden
   entities:
     - person.oren_teich
     - person.olivia_teich
@@ -175,3 +173,20 @@ sonos:
     - media_player.master_bath
     - media_player.outside
     - media_player.dining_room
+
+main_controls:
+  name: Main Controls
+  view: false
+  control: hidden
+  entities:
+    - cover.30th_garage_door
+    - input_boolean.party_mode
+
+main_scenes:
+  name: Scenes
+  view: false
+  control: hidden
+  entities:
+    - scene.bedtime
+    - scene.morning
+    - scene.sleep
