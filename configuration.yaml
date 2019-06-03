@@ -48,10 +48,18 @@ binary_sensor:
   - platform: workday
     country: US
 
+timer:
+  front_door_lock:
+    duration: '00:03:00'
+
+input_boolean:
+  party_mode:
+    name: Party Mode
+    initial: off
+
+
 group: !include groups.yaml
 script: !include scripts.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
-# automation: !include automations.yaml
-
 homekit: !include homekit.yaml

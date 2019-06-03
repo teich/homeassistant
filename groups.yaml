@@ -6,6 +6,7 @@ default_view:
     - scene.bedtime
     - scene.morning
     - scene.sleep
+    - input_boolean.party_mode
 
 downstairs:
   name: Downstairs
