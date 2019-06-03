@@ -7,6 +7,7 @@ default_view:
     - scene.morning
     - scene.sleep
     - input_boolean.party_mode
+    - lock.front_door
 
 downstairs:
   name: Downstairs
