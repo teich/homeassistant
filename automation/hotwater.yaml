@@ -7,6 +7,9 @@
     - condition: state
       entity_id: group.family
       state: 'home'
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: switch.hot_water_circulation_pump
@@ -33,6 +36,9 @@
     - condition: state
       entity_id: group.family
       state: 'home'
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: switch.hot_water_circulation_pump

@@ -56,6 +56,8 @@ input_boolean:
   party_mode:
     name: Party Mode
     initial: off
+  vacation_mode:
+    initial: off
 
 wemo:
   discovery: false

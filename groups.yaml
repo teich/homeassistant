@@ -189,6 +189,7 @@ main_controls:
   entities:
     - cover.30th_garage_door
     - input_boolean.party_mode
+    - input_boolean.vacation_mode
 
 main_scenes:
   name: Scenes
