@@ -57,6 +57,10 @@ input_boolean:
     name: Party Mode
     initial: off
 
+wemo:
+  discovery: false
+  static:
+    - 192.168.1.90
 
 group: !include groups.yaml
 script: !include scripts.yaml
