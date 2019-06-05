@@ -1,0 +1,51 @@
+- id: am-circ-on
+  alias: AM Turn on Hot Water Circulation Pump
+  trigger:
+    platform: time
+    at: "07:00:00"
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.hot_water_circulation_pump
+
+- id: am-circ-off
+  alias: AM turn off hot water Circulation
+  trigger:
+    platform: time
+    at: "09:00:00"
+  condition:
+    - condition: state
+      entity_id: switch.hot_water_circulation_pump
+      state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.hot_water_circulation_pump
+
+- id: pm-circ-on
+  alias: PM Turn on Hot Water Circulation Pump
+  trigger:
+    platform: time
+    at: "19:00:00"
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.hot_water_circulation_pump
+
+- id: am-circ-off
+  alias: AM turn off hot water Circulation
+  trigger:
+    platform: time
+    at: "22:00:00"
+  condition:
+    - condition: state
+      entity_id: switch.hot_water_circulation_pump
+      state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.hot_water_circulation_pump
