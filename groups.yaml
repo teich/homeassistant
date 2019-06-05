@@ -35,6 +35,14 @@ upstairs:
     - group.master_bedroom
     - group.master_bathroom
 
+cameras:
+  name: Cameras
+  view: yes
+  icon: mdi:camera
+  entities:
+    - camera.garage
+    - camera.living_room
+    
 office:
   name: Office
   entities:
@@ -150,7 +158,6 @@ garage:
   name: Garage
   control: hidden
   entities: 
-    - camera.garage
     - cover.30th_garage_door
 
 family:
