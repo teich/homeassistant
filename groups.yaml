@@ -16,7 +16,7 @@ downstairs:
     - group.garage
     - group.exterior
     
-main:
+main_floor:
   name: Main Floor
   view: yes
   entities:
