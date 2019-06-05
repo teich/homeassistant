@@ -2,6 +2,14 @@ filter:
   include_entities:
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+
+    - light.bath_2_bath_2_cans
+    - light.bath_2_bath_2_fan
+    - light.bath_2_bath_2_pendant
+    - light.bed_2_bed_2_cans
+    - light.bed_2_bed_2_closet_cans
+    - light.bed_2_bed_2_lamp
+
     - cover.30th_garage_door
     - scene.morning
     - scene.sleep
