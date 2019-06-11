@@ -1,0 +1,47 @@
+- id: masterbathfan
+  alias: 'Timer: Master Bathroom Fan'
+  trigger:
+    platform: state
+    entity_id: light.master_bath_closet_m_bath_fan
+    to: 'on'
+    for:
+      minutes: 30
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.master_bath_closet_m_bath_fan
+
+- id: beckettfan
+  alias: 'Timer: Beckett Bathroom Fan'
+  trigger:
+    platform: state
+    entity_id: light.bath_2_bath_2_fan
+    to: 'on'
+    for:
+      minutes: 30
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.bath_2_bath_2_fan
+
+- id: guestfan
+  alias: 'Timer: Guest Bathroom Fan'
+  trigger:
+    platform: state
+    entity_id: light.guest_bath_guest_bath_fan
+    to: 'on'
+    for:
+      minutes: 30
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.guest_bath_guest_bath_fan
+
+- id: powderfan
+  alias: 'Timer: Powder Room Fan'
+  trigger:
+    platform: state
+    entity_id: light.powder_room_powder_fan
+    to: 'on'
+    for:
+      minutes: 30
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.powder_room_powder_fan
