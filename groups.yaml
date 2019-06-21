@@ -58,7 +58,6 @@ beckett_room:
     - light.bed_2_bed_2_cans
     - light.bed_2_bed_2_closet_cans
     - light.bed_2_bed_2_lamp
-    - climate.kids_room
 
 master_bedroom:
   name: Master Bedroom
@@ -71,7 +70,6 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
-    - climate.master_bedroom
 
 master_bathroom:
   name: Master Bathroom
@@ -111,7 +109,6 @@ entry:
     - light.entry_hall_entry_led_cove
     - light.entry_hall_stair_down_enytry_lights
     - lock.front_door
-    - climate.entryway
 
 guest_bedroom:
   name: Guest Bedroom
@@ -121,7 +118,6 @@ guest_bedroom:
     - light.guest_bath_bath_3_towel_warmer
     - light.guest_bath_guest_bath_fan
     - light.guest_bed_guest_bed_cans
-    - climate.guest_room
 
 kitchen:
   name: Kitchen
@@ -132,7 +128,6 @@ kitchen:
     - light.kitchen_breakfast_nook_kitchen_field_cans
     - light.kitchen_breakfast_nook_kitchen_island_pendant
     - light.kitchen_breakfast_nook_kitchen_under_cab
-    - climate.kitchen
 
 laundry:
   name: Laundry & Powder Room
@@ -151,7 +146,6 @@ living:
     - light.living_room_stair_up_hall_cans_x_8
     - light.living_room_stair_up_piano_wall_stair_up_cans
     - light.living_room_stair_up_tv_wall_cans
-    - climate.living_room
 
 wine:
   name: Cellar
@@ -204,3 +198,14 @@ main_scenes:
     - scene.bedtime
     - scene.morning
     - scene.sleep
+
+thermostats:
+  icon: mdi:radiator
+  view: yes
+  entities:
+    - climate.entryway
+    - climate.guest_room
+    - climate.kitchen
+    - climate.living_room
+    - climate.kids_room
+    - climate.master_bedroom
