@@ -45,3 +45,15 @@
   action:
     service: homeassistant.turn_off
     entity_id: light.powder_room_powder_fan
+
+- id: laundryfan
+  alias: 'Timer: Laundry Room Fan'
+  trigger:
+    platform: state
+    entity_id: light.laundry_room_laundry_fan
+    to: 'on'
+    for:
+      minutes: 120
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.laundry_room_laundry_fan
