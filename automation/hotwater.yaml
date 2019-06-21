@@ -43,8 +43,8 @@
     service: homeassistant.turn_on
     entity_id: switch.hot_water_circulation_pump
 
-- id: am-circ-off
-  alias: AM turn off hot water Circulation
+- id: pm-circ-off
+  alias: PM turn off hot water Circulation
   trigger:
     platform: time
     at: "22:00:00"
