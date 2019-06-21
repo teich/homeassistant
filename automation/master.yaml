@@ -5,12 +5,14 @@
     event: sunset
     offset: '-00:30:00'
   condition:
-    - condition: time
-      after: '16:00:00'
-      before: '23:00:00'
-    - condition: state
-      entity_id: input_boolean.vacation_mode
-      state: 'off'
+    condition: and
+    conditions:
+      - condition: time
+        after: '16:00:00'
+        before: '23:00:00'
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.bedtime
@@ -21,15 +23,17 @@
     platform: time
     at: '07:00:00'
   condition:
-    - condition: state
-      entity_id: binary_sensor.workday_sensor
-      state: 'on'
-    - condition: state
-      entity_id: group.family
-      state: home
-    - condition: state
-      entity_id: input_boolean.vacation_mode
-      state: 'off'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
+      - condition: state
+        entity_id: group.family
+        state: home
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: scene.turn_on
     entity_id: scene.morning
@@ -43,14 +47,16 @@
     platform: time
     at: '06:00:00'
   condition:
-    - condition: state
-      entity_id: input_boolean.vacation_mode
-      state: 'off'
-    - condition: state
-      entity_id: group.family
-      state: home
-    - condition: template
-      value_template: "{{states.climate.master_bedroom.attributes.current_temperature|float < 67|float }}"
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+      - condition: state
+        entity_id: group.family
+        state: home
+      - condition: template
+        value_template: "{{states.climate.master_bedroom.attributes.current_temperature|float < 67|float }}"
   action:
     service: homeassistant.turn_on
     entity_id: light.master_bath_closet_m_closet_towel_warmer
