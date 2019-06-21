@@ -58,6 +58,7 @@ beckett_room:
     - light.bed_2_bed_2_cans
     - light.bed_2_bed_2_closet_cans
     - light.bed_2_bed_2_lamp
+    - climate.kids_room
 
 master_bedroom:
   name: Master Bedroom
@@ -70,6 +71,7 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+    - climate.master_bedroom
 
 master_bathroom:
   name: Master Bathroom
@@ -103,11 +105,13 @@ dining:
     - light.dining_room_stair_down_kit_to_liv_room_hall_cans_a1x2
 
 entry:
+  name: Entry
   entities:
     - light.entry_hall_entry_lamp
     - light.entry_hall_entry_led_cove
     - light.entry_hall_stair_down_enytry_lights
     - lock.front_door
+    - climate.entryway
 
 guest_bedroom:
   name: Guest Bedroom
@@ -117,6 +121,7 @@ guest_bedroom:
     - light.guest_bath_bath_3_towel_warmer
     - light.guest_bath_guest_bath_fan
     - light.guest_bed_guest_bed_cans
+    - climate.guest_room
 
 kitchen:
   name: Kitchen
@@ -149,7 +154,7 @@ living:
     - climate.living_room
 
 wine:
-  name: Wine Cellar
+  name: Cellar
   entities:
     - light.wine_cellar_wine_cellar_cans
     - light.wine_cellar_wine_cellar_pendant
