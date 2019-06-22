@@ -19,6 +19,7 @@ default_config:
 #   base_url: example.duckdns.org:8123
 
 discovery:
+hassio:
 
 nest:
  client_id: !secret nest_client_id
