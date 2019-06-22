@@ -36,10 +36,10 @@ cover:
     password: !secret myq_password
     type: chamberlain
 
-# lutron:
-#   host: 192.168.1.181
-#   username: !secret lutron_username
-#   password: !secret lutron_password
+lutron:
+  host: 192.168.1.181
+  username: !secret lutron_username
+  password: !secret lutron_password
 
 sense:
   email: !secret sense_username
