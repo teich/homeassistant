@@ -36,10 +36,10 @@ cover:
     password: !secret myq_password
     type: chamberlain
 
-# lutron:
-#   host: 192.168.1.181
-#   username: !secret lutron_username
-#   password: !secret lutron_password
+lutron:
+  host: 192.168.1.181
+  username: !secret lutron_username
+  password: !secret lutron_password
 
 sense:
   email: !secret sense_username
@@ -67,11 +67,11 @@ input_boolean:
 #   static:
 #     - 192.168.1.90
 
-sensor:
-  - platform: xiaomi_miio
-    name: Xiaomi Air Quality Monitor
-    host: 192.168.1.49
-    token: !secret airmonitor
+#sensor:
+#  - platform: xiaomi_miio
+#    name: Xiaomi Air Quality Monitor
+#    host: 192.168.1.49
+#    token: !secret airmonitor
 
 group: !include groups.yaml
 script: !include scripts.yaml
