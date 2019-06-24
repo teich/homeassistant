@@ -77,6 +77,10 @@ wemo:
 #    host: 192.168.1.49
 #    token: !secret airmonitor
 
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+
 group: !include groups.yaml
 script: !include scripts.yaml
 scene: !include_dir_list scenes
