@@ -211,3 +211,9 @@ thermostats:
     - climate.living_room
     - climate.kids_room
     - climate.master_bedroom
+
+skylights:
+  view: no
+  entities:
+    - cover.velux_window_2
+    - cover.velux_window_3

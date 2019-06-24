@@ -1,0 +1,9 @@
+- id: hot-vent
+  alias: 'Open vents when hot inside'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.velux_sensor_temperature_2
+    above: '74'    
+  action:
+    service: cover.open_cover
+    entity_id: group.skylights
