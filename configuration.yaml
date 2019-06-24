@@ -22,7 +22,10 @@ recorder:
   purge_keep_days: 5
   purge_interval: 1
   db_url: mysql://homeassistant:homeassistant@192.168.1.216:3306/homeassistant?charset=utf8
+
 discovery:
+  enable:
+    - homekit
 
 nest:
  client_id: !secret nest_client_id
@@ -44,9 +47,9 @@ lutron:
   username: !secret lutron_username
   password: !secret lutron_password
 
-sense:
-  email: !secret sense_username
-  password: !secret sense_password
+#sense:
+#  email: !secret sense_username
+#  password: !secret sense_password
 
 binary_sensor:
   - platform: workday
