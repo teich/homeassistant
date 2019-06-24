@@ -13,6 +13,9 @@ filter:
     - cover.30th_garage_door
     - scene.morning
     - scene.sleep
+
+    - cover.velux_window_2
+    - cover.velux_window_3
 entity_config:
   light.master_bed_m_bed_lamp_left:
     name: "Oren Bedside"
