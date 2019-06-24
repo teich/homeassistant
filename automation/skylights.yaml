@@ -1,4 +1,3 @@
-# TODO: add condition only when it's cooler outside than inside
 # TODO: perhaps limit how often this runs?
 
 - id: hot-vent
@@ -6,7 +5,14 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.velux_sensor_temperature_2
-    above: '74'    
+    above: 74.0
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: weather.dark_sky
+        value_template: "{{ state.attributes.temperature }}"
+        below: 75.0
   action:
     service: cover.open_cover
     entity_id: group.skylights
