@@ -8,7 +8,7 @@ jobs:
     name: Run
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+#     - uses: actions/checkout@master
     - name: Copy Secrets
       run: cp secrets_ci.yaml secrets.yaml
     - name: Check Configuration
