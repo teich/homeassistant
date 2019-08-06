@@ -12,4 +12,4 @@ jobs:
     - name: Copy Secrets
       run: cp secrets_ci.yaml secrets.yaml
     - name: Check Configuration
-      run: 'hass --script check_config -c .
+      run: hass --script check_config -c .
