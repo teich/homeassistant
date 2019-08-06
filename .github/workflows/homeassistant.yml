@@ -7,7 +7,7 @@ jobs:
     container:
       image: homeassistant/amd64-homeassistant
 
-     steps:
+    steps:
     - uses: actions/checkout@master
     - name: Copy Secrets
       run: cp secrets_ci.yaml secrets.yaml
