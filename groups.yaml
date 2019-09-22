@@ -201,7 +201,7 @@ main_scenes:
     - scene.bedtime
     - scene.morning
     - scene.sleep
-    - scene.fan
+    - scene.night_fan
 
 thermostats:
   icon: mdi:radiator
