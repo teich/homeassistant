@@ -1,6 +1,6 @@
 - name: Fan
   entities:
     cover.master_bed_deck_blackout: 
-      position: 35
+      position: 29
     cover.master_bed_deck_sheer: 
-      position: 35
+      position: 29
