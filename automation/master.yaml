@@ -21,7 +21,7 @@
   alias: "Master Weekday Wakeup"
   trigger:
     platform: time
-    at: '07:00:00'
+    at: '06:45:00'
   condition:
     condition: and
     conditions:

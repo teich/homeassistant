@@ -71,6 +71,7 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+    - switch.fan
 
 master_bathroom:
   name: Master Bathroom
