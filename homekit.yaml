@@ -1,30 +1,9 @@
 filter:
-  include_entities:
-    - light.master_bed_m_bed_lamp_left
-    - light.master_bed_m_bed_lamp_right
-
-    - light.bath_2_bath_2_cans
-    - light.bath_2_bath_2_fan
-    - light.bath_2_bath_2_pendant
-    - light.bed_2_bed_2_cans
-    - light.bed_2_bed_2_closet_cans
-    - light.bed_2_bed_2_lamp
-
-    - cover.30th_garage_door
-    - scene.morning
-    - scene.sleep
-    
-    - cover.master_bed_bed_corner_window
-    - cover.master_bed_deck_blackout
-    - cover.master_bed_deck_sheer
-    - cover.master_bed_tv_window_left
-    - cover.master_bed_tv_window_right
-    
-    - light.office_stair_landing_office_cans
-    - light.office_stair_landing_stair_hall_cans
-    
-    - cover.velux_window_2
-    - cover.velux_window_3
+  include_domains:
+    - cover
+    - light
+    - switch
+    - scene
 entity_config:
   light.master_bed_m_bed_lamp_left:
     name: "Oren Bedside"
