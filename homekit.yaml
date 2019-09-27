@@ -13,7 +13,16 @@ filter:
     - cover.30th_garage_door
     - scene.morning
     - scene.sleep
-
+    
+    - cover.master_bed_bed_corner_window
+    - cover.master_bed_deck_blackout
+    - cover.master_bed_deck_sheer
+    - cover.master_bed_tv_window_left
+    - cover.master_bed_tv_window_right
+    
+    - light.office_stair_landing_office_cans
+    - light.office_stair_landing_stair_hall_cans
+    
     - cover.velux_window_2
     - cover.velux_window_3
 entity_config:
@@ -21,3 +30,7 @@ entity_config:
     name: "Oren Bedside"
   light.master_bed_m_bed_lamp_right:
     name: "Olivia Bedside"
+  light.office_stair_landing_office_cans:
+    name: "Office Cans"
+  light.office_stair_landing_stair_hall_cans:
+    name: "Hall Cans"
