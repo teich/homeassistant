@@ -3,7 +3,12 @@ filter:
     - cover
     - light
     - switch
-    - scene
+  include_entities:
+    - scene.morning
+    - scene.night_fan
+    - scene.sleep
+    - scene.home
+    - scene.bedtime
 entity_config:
   light.master_bed_m_bed_lamp_left:
     name: "Oren Bedside"
