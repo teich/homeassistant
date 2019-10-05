@@ -4,7 +4,7 @@ Copy from this [raw file](https://raw.githubusercontent.com/awrede/pylutron/mast
 ```
 $ sudo docker exec -it home-assistant /bin/bash
 $ cd /usr/local/lib/python3.7/site-packages/pylutron
-$ vi __init.py__
+$ vi __init__.py
 
 search for GNET and change to QNET
 
