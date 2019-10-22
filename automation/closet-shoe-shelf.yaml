@@ -8,17 +8,17 @@
   - service: light.turn_on
     data:
       entity_id: light.shelf_1_2
-      brightness: 0
+      brightness: 1
       white_value: 255 
   - service: light.turn_on
     data:
       entity_id: light.shelf_2_2
-      brightness: 0
+      brightness: 1
       white_value: 255 
   - service: homeassistant.turn_on
     data:
       entity_id: light.shelf_3
-      brightness: 0
+      brightness: 1
       white_value: 255 
   
     
