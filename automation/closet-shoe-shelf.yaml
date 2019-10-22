@@ -5,8 +5,16 @@
     entity_id: binary_sensor.closet_led_motion_sensor
     to: 'on'
   action:
-    service: homeassistant.turn_on
+  - service: homeassistant.turn_on
     entity_id: light.shelf_1_2
+  - delay: 00:00:01
+  - service: homeassistant.turn_on
+    entity_id: light.shelf_2_2
+  - delay: 00:00:01
+  - service: homeassistant.turn_on
+    entity_id: light.shelf_3
+  
+    
 
 - id: shoe-shelf-automation-off
   alias: 'Turn off shoe shelf led'
@@ -15,5 +23,11 @@
     entity_id: binary_sensor.closet_led_motion_sensor
     to: 'off'
   action:
-    service: homeassistant.turn_off
+  - service: homeassistant.turn_off
+    entity_id: light.shelf_3
+  - delay: 00:00:01
+  - service: homeassistant.turn_off
+    entity_id: light.shelf_2_2
+  - delay: 00:00:01
+  - service: homeassistant.turn_off
     entity_id: light.shelf_1_2
