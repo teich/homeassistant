@@ -8,21 +8,20 @@
   - service: light.turn_on
     data:
       entity_id: light.shelf_1_2
-      rgb_color: [0,255,0]
-      white_value: 128 
+      brightness: 0
+      white_value: 255 
   - service: light.turn_on
     data:
       entity_id: light.shelf_2_2
-      rgb_color: [0,0,255]
-      white_value: 128 
+      brightness: 0
+      white_value: 255 
   - service: homeassistant.turn_on
     data:
       entity_id: light.shelf_3
-      rgb_color: [0,0,0]
+      brightness: 0
       white_value: 255 
   
     
-
 - id: shoe-shelf-automation-off
   alias: 'Turn off shoe shelf led'
   trigger:
