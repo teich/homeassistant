@@ -20,6 +20,8 @@
     platform: state
     entity_id: binary_sensor.closet_led_motion_sensor
     to: 'off'
+    for:
+      seconds: 20
   action:
   - service: homeassistant.turn_off
     entity_id: light.shelf_3
