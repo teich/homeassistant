@@ -7,10 +7,8 @@
   action:
   - service: homeassistant.turn_on
     entity_id: light.shelf_1_2
-  - delay: 00:00:01
   - service: homeassistant.turn_on
     entity_id: light.shelf_2_2
-  - delay: 00:00:01
   - service: homeassistant.turn_on
     entity_id: light.shelf_3
   
@@ -25,9 +23,7 @@
   action:
   - service: homeassistant.turn_off
     entity_id: light.shelf_3
-  - delay: 00:00:01
   - service: homeassistant.turn_off
     entity_id: light.shelf_2_2
-  - delay: 00:00:01
   - service: homeassistant.turn_off
     entity_id: light.shelf_1_2
