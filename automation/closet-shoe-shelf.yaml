@@ -5,10 +5,14 @@
     entity_id: binary_sensor.closet_led_motion_sensor
     to: 'on'
   action:
-  - service: homeassistant.turn_on
-    entity_id: light.shelf_1_2
-  - service: homeassistant.turn_on
-    entity_id: light.shelf_2_2
+  - service: light.turn_on
+    data:
+      entity_id: light.shelf_1_2
+      rgb_color: [0,255,0]
+      white_value: 0 
+  - service: light.turn_on
+    data:
+      entity_id: light.shelf_2_2
   - service: homeassistant.turn_on
     entity_id: light.shelf_3
   
