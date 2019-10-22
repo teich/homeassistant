@@ -3,6 +3,8 @@ homeassistant:
   customize_glob:
     "binary_sensor.*":
       hidden: true
+    "binary_sensor.closet*":
+      hidden: false
     "sensor.*":
       hidden: true
 
