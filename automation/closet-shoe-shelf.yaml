@@ -10,7 +10,6 @@
       entity_id: light.shoes_lights
       brightness: 1
       white_value: 255 
-      effect: Scan
     
 - id: shoe-shelf-automation-off
   alias: 'Turn off shoe shelf led'
