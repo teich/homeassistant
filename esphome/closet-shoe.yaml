@@ -23,25 +23,29 @@ light:
     num_leds: 150
     type: GRBW
     name: "Shoes Lights"
+    effects:
+      - addressable_rainbow:
+      - addressable_color_wipe:
+      - addressable_scan:
 
-  - platform: partition
-    name: "Shelf 1"
-    segments:
-      - id: shoelights
-        from: 0
-        to: 30
-  - platform: partition
-    name: "Shelf 2"
-    segments:
-      - id: shoelights
-        from: 61
-        to: 93
-  - platform: partition
-    name: "Shelf 3"
-    segments:
-      - id: shoelights
-        from: 109
-        to: 139
+  # - platform: partition
+  #   name: "Shelf 1"
+  #   segments:
+  #     - id: shoelights
+  #       from: 0
+  #       to: 30
+  # - platform: partition
+  #   name: "Shelf 2"
+  #   segments:
+  #     - id: shoelights
+  #       from: 61
+  #       to: 93
+  # - platform: partition
+  #   name: "Shelf 3"
+  #   segments:
+  #     - id: shoelights
+  #       from: 109
+  #       to: 139
 
 binary_sensor:
   - platform: gpio
