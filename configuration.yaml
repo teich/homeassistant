@@ -58,10 +58,21 @@ input_boolean:
     icon: mdi:beach
     initial: off
 
+input_datetime:
+  only_time:
+    name: Wakup Time
+    has_date: false
+    has_time: true
+
 wemo:
   discovery: true
   # static:
     # - 192.168.1.90
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
 
 #sensor:
 #  - platform: xiaomi_miio
