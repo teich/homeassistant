@@ -1,4 +1,10 @@
 homeassistant:
+  # name: Home
+  # latitude: !secret lat
+  # longitude: !secret long
+  # elevation: 0
+  # unit_system: imperial
+  # time_zone: America/Los_Angeles
   customize: !include customize.yaml
   customize_glob:
     "binary_sensor.*":
@@ -15,7 +21,8 @@ recorder:
   purge_interval: 1
   db_url: mysql://homeassistant:homeassistant@192.168.1.216:3306/homeassistant?charset=utf8
 
-# discovery:
+discovery:
+hassio:
 
 nest:
  client_id: !secret nest_client_id
