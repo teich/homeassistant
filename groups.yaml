@@ -192,6 +192,7 @@ main_controls:
     - cover.30th_garage_door
     - input_boolean.party_mode
     - input_boolean.vacation_mode
+    - input_datetime.only_time
 
 main_scenes:
   name: Scenes

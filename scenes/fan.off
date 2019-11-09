@@ -1,7 +1,0 @@
-# - name: Night Fan
-#   entities:
-#     cover.master_bed_deck_blackout: 
-#       position: 29
-#     cover.master_bed_deck_sheer: 
-#       position: 29
-#     switch.fan: on
