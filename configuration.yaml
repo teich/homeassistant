@@ -65,13 +65,6 @@ input_boolean:
     icon: mdi:beach
     initial: off
 
-<<<<<<< HEAD
-# wemo:
-#   discovery: false
-#   static:
-#     - 192.168.1.90
-
-=======
 input_datetime:
   only_time:
     name: Wakup Time
@@ -88,19 +81,15 @@ sensor:
     display_options:
       - 'time'
 
->>>>>>> master
 #sensor:
 #  - platform: xiaomi_miio
 #    name: Xiaomi Air Quality Monitor
 #    host: 192.168.1.49
 #    token: !secret airmonitor
-<<<<<<< HEAD
-=======
 
 weather:
   - platform: darksky
     api_key: !secret darksky
->>>>>>> master
 
 group: !include groups.yaml
 script: !include scripts.yaml
