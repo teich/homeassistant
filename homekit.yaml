@@ -1,20 +1,20 @@
 filter:
+  include_domains:
+    - cover
+    - light
+    - switch
   include_entities:
-    - light.master_bed_m_bed_lamp_left
-    - light.master_bed_m_bed_lamp_right
-
-    - light.bath_2_bath_2_cans
-    - light.bath_2_bath_2_fan
-    - light.bath_2_bath_2_pendant
-    - light.bed_2_bed_2_cans
-    - light.bed_2_bed_2_closet_cans
-    - light.bed_2_bed_2_lamp
-
-    - cover.30th_garage_door
     - scene.morning
+    - scene.night_fan
     - scene.sleep
+    - scene.home
+    - scene.bedtime
 entity_config:
   light.master_bed_m_bed_lamp_left:
     name: "Oren Bedside"
   light.master_bed_m_bed_lamp_right:
     name: "Olivia Bedside"
+  light.office_stair_landing_office_cans:
+    name: "Office Cans"
+  light.office_stair_landing_stair_hall_cans:
+    name: "Hall Cans"

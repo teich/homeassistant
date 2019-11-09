@@ -71,6 +71,8 @@ light.master_bed_m_bed_lamp_left:
   friendly_name: Oren's Bedside Lamp
 light.master_bed_m_bed_lamp_right:
   friendly_name: Olivia's Bedside Lamp
+switch.fan:
+  icon: mdi:fan
 
 ## Master Bathroom
 light.master_bath_closet_m_bath_cans:

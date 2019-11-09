@@ -1,22 +1,28 @@
 homeassistant:
+<<<<<<< HEAD
   # name: Home
   # latitude: !secret lat
   # longitude: !secret long
   # elevation: 0
   # unit_system: imperial
   # time_zone: America/Los_Angeles
+=======
+>>>>>>> master
   customize: !include customize.yaml
   customize_glob:
     "binary_sensor.*":
       hidden: true
+    "binary_sensor.closet*":
+      hidden: false
     "sensor.*":
       hidden: true
 
 default_config:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+recorder:
+  purge_keep_days: 5
+  purge_interval: 1
+  db_url: mysql://homeassistant:homeassistant@192.168.1.216:3306/homeassistant?charset=utf8
 
 discovery:
 hassio:
@@ -41,9 +47,9 @@ lutron:
   username: !secret lutron_username
   password: !secret lutron_password
 
-sense:
-  email: !secret sense_username
-  password: !secret sense_password
+#sense:
+#  email: !secret sense_username
+#  password: !secret sense_password
 
 binary_sensor:
   - platform: workday
@@ -62,16 +68,42 @@ input_boolean:
     icon: mdi:beach
     initial: off
 
+<<<<<<< HEAD
 # wemo:
 #   discovery: false
 #   static:
 #     - 192.168.1.90
 
+=======
+input_datetime:
+  only_time:
+    name: Wakup Time
+    has_date: false
+    has_time: true
+
+wemo:
+  discovery: true
+  # static:
+    # - 192.168.1.90
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+
+>>>>>>> master
 #sensor:
 #  - platform: xiaomi_miio
 #    name: Xiaomi Air Quality Monitor
 #    host: 192.168.1.49
 #    token: !secret airmonitor
+<<<<<<< HEAD
+=======
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+>>>>>>> master
 
 group: !include groups.yaml
 script: !include scripts.yaml

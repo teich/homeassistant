@@ -58,6 +58,7 @@ beckett_room:
     - light.bed_2_bed_2_cans
     - light.bed_2_bed_2_closet_cans
     - light.bed_2_bed_2_lamp
+    - cover.velux_window_3
 
 master_bedroom:
   name: Master Bedroom
@@ -70,6 +71,7 @@ master_bedroom:
     - light.master_bed_m_bed_cans
     - light.master_bed_m_bed_lamp_left
     - light.master_bed_m_bed_lamp_right
+    - switch.fan
 
 master_bathroom:
   name: Master Bathroom
@@ -79,6 +81,7 @@ master_bathroom:
     - light.master_bath_closet_m_bath_pendant
     - light.master_bath_closet_m_closet_cans
     - light.master_bath_closet_m_closet_towel_warmer
+    - cover.velux_window_2
 
 exterior:
   name: Outside
@@ -189,6 +192,7 @@ main_controls:
     - cover.30th_garage_door
     - input_boolean.party_mode
     - input_boolean.vacation_mode
+    - input_datetime.only_time
 
 main_scenes:
   name: Scenes
@@ -198,6 +202,7 @@ main_scenes:
     - scene.bedtime
     - scene.morning
     - scene.sleep
+    - scene.night_fan
 
 thermostats:
   icon: mdi:radiator
@@ -209,3 +214,10 @@ thermostats:
     - climate.living_room
     - climate.kids_room
     - climate.master_bedroom
+
+skylights:
+  view: no
+  entities:
+    - cover.velux_window_2
+    - cover.velux_window_3
+

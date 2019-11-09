@@ -1,0 +1,39 @@
+- id: shoe-shelf-automation
+  alias: 'Turn on shoe shelf led'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.closet_led_motion_sensor
+    to: 'on'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.shelf_1_2
+      brightness: 1
+      white_value: 255 
+  - service: light.turn_on
+    data:
+      entity_id: light.shelf_2_2
+      brightness: 1
+      white_value: 255 
+  - service: homeassistant.turn_on
+    data:
+      entity_id: light.shelf_3
+      brightness: 1
+      white_value: 255 
+  
+    
+- id: shoe-shelf-automation-off
+  alias: 'Turn off shoe shelf led'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.closet_led_motion_sensor
+    to: 'off'
+    for:
+      seconds: 20
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.shelf_3
+  - service: homeassistant.turn_off
+    entity_id: light.shelf_2_2
+  - service: homeassistant.turn_off
+    entity_id: light.shelf_1_2

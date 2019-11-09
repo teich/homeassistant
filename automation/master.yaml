@@ -20,8 +20,8 @@
 - id: weekday-wakeup
   alias: "Master Weekday Wakeup"
   trigger:
-    platform: time
-    at: '07:00:00'
+    platform: template
+    value_template: "{{ states('sensor.time') == (states.input_datetime.only_time.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
   condition:
     condition: and
     conditions:
