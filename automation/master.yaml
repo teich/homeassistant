@@ -52,8 +52,8 @@
       - condition: state
         entity_id: group.family
         state: home
-      - condition: template
-        value_template: "{{states.climate.master_bedroom.attributes.current_temperature|float < 67|float }}"
+      # - condition: template
+      #   value_template: "{{states.climate.master_bedroom.attributes.current_temperature|float < 67|float }}"
   action:
     service: homeassistant.turn_on
     entity_id: light.master_bath_closet_m_closet_towel_warmer
