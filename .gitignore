@@ -13,6 +13,12 @@ pids
 __pycache__
 *.pyc
 
+#python venv
+bin/
+include/
+lib/
+pyvenv.cfg
+
 # Other
 insteon_plm_device_info.dat
 *.uuid
