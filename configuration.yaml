@@ -23,8 +23,8 @@ recorder:
 
 discovery:
 hassio:
-lovelace:
-  mode: yaml
+# lovelace:
+#   mode: yaml
 
 august:
   login_method: email
