@@ -89,6 +89,21 @@ weather:
   - platform: darksky
     api_key: !secret darksky
 
+badnest:
+  email: !secret email
+  password: !secret nest_password
+  region: us
+
+climate:
+  - platform: badnest
+    scan_interval: 10
+
+camera:
+  - platform: badnest
+
+sensor:
+  - platform: badnest
+
 group: !include groups.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
