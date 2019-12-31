@@ -15,14 +15,14 @@ api:
 
 ota:
 
-# light:
-#   - platform: neopixelbus
-#     id: shoelights
-#     variant: SK6812
-#     pin: GPIO3
-#     num_leds: 150
-#     type: GRBW
-#     name: "Shoes Lights"
+light:
+  - platform: neopixelbus
+    id: shoelights
+    variant: SK6812
+    pin: GPIO3
+    num_leds: 60
+    type: GRBW
+    name: "Shoes Lights"
 
 #   - platform: partition
 #     name: "Shelf 1"
