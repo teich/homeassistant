@@ -20,7 +20,7 @@ lib/
 pyvenv.cfg
 
 # Other
-insteon_plm_device_info.dat
+custom_components/
 *.uuid
 *.conf
 *.db
