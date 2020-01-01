@@ -70,20 +70,10 @@ input_datetime:
     has_time: true
 
 wemo:
-  discovery: true
-  # static:
-    # - 192.168.1.90
-
-sensor:
-  - platform: time_date
-    display_options:
-      - 'time'
-
-#sensor:
-#  - platform: xiaomi_miio
-#    name: Xiaomi Air Quality Monitor
-#    host: 192.168.1.49
-#    token: !secret airmonitor
+  # discovery: true
+  static:
+    - 192.168.1.90 
+    - 192.168.1.238
 
 weather:
   - platform: darksky
@@ -96,13 +86,21 @@ badnest:
 
 climate:
   - platform: badnest
-    scan_interval: 10
+    scan_interval: 30
 
 camera:
   - platform: badnest
 
 sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
   - platform: badnest
+#  - platform: xiaomi_miio
+#    name: Xiaomi Air Quality Monitor
+#    host: 192.168.1.49
+#    token: !secret airmonitor
+
 
 group: !include groups.yaml
 scene: !include_dir_list scenes
