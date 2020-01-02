@@ -12,7 +12,7 @@ default_config:
 recorder:
   purge_keep_days: 5
   purge_interval: 1
-  # db_url: mysql://homeassistant:homeassistant@192.168.1.216:3306/homeassistant?charset=utf8
+  db_url: mysql://hass:random4171261@core-mariadb/homeassistant?charset=utf8
 
 discovery:
 hassio:
