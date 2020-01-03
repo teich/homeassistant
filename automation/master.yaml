@@ -75,10 +75,6 @@
     device_id: 2aff7e054c274ce4a3906d695518ec5e
     entity_id: binary_sensor.master_patio_door
     domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
   condition:
     condition: or
     conditions:
