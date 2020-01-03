@@ -72,7 +72,7 @@
   trigger:
     platform: state
     entity_id: binary_sensor.master_patio_door
-    to: 'open'
+    to: 'on'
   condition:
     condition: or
     conditions:
