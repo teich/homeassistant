@@ -74,11 +74,14 @@
     entity_id: binary_sensor.master_patio_door
     to: 'open'
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: state
-        entity_id: group.master_patio_blinds
+        entity_id: cover.master_bed_deck_blackout
+        state: 'closed'
+      - condition: state
+        entity_id: cover.master_bed_deck_sheer
         state: 'closed'
   action:
     service: cover.open_cover
-    entity_id: cover.master_bed_deck_blackout
+    entity_id: cover.master_patio_blinds
