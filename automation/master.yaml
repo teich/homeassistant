@@ -66,3 +66,19 @@
   action:
     service: homeassistant.turn_off
     entity_id: light.master_bath_closet_m_closet_towel_warmer
+
+- id: patio-open-blinds-door
+  alias: "Open Blinds when patio door open"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.master_patio_door
+    to: 'open'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.master_patio_blinds
+        state: 'closed'
+  action:
+    service: cover.open_cover
+    entity_id: cover.master_bed_deck_blackout
