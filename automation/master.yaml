@@ -70,9 +70,15 @@
 - id: patio-open-blinds-door
   alias: "Open Blinds when patio door open"
   trigger:
-    platform: state
+    type: opened
+    platform: device
+    device_id: 2aff7e054c274ce4a3906d695518ec5e
     entity_id: binary_sensor.master_patio_door
-    to: 'on'
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
   condition:
     condition: or
     conditions:
@@ -84,4 +90,4 @@
         state: 'closed'
   action:
     service: cover.open_cover
-    entity_id: cover.master_patio_blinds
+    entity_id: group.master_patio_blinds
