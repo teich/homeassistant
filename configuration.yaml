@@ -73,8 +73,8 @@ weather:
     api_key: !secret darksky
 
 badnest:
-  email: !secret email
-  password: !secret nest_password
+  issue_token: !secret nest_issue_token
+  cookie: !secret nest_cookie
   region: us
 
 climate:
