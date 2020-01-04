@@ -1,0 +1,82 @@
+schedy_heating:  # This is our app instance name.
+  module: hass_apps_loader
+  class: SchedyApp
+
+  actor_type: thermostat
+
+  expression_environment: |
+    def vacation_mode():
+      return state("input_select.vacation_mode")
+
+  schedule_snippets:
+    standard:
+    - v: 68
+      rules:
+      - weekdays: 1-5
+        rules:
+          - x: "Next() if vacation_mode() == 'Off' else Break()"
+          - { start: "05:00", end: "18:00" }
+      - weekdays: 6-7
+        rules:
+          - { start: "05:00", end: "18:00" }
+    coldrooms:
+    - v: 60
+      rules:
+      - weekdays: 1-7
+        rules:
+          - { start: "05:00", end: "20:00" }
+
+  watched_entities:
+  - input_select.vacation_mode
+  - binary_sensor.master_patio_door
+  - binary_sensor.master_window
+
+  schedule_prepend:
+  - x: "Mark(OFF, Mark.OVERLAY) if not is_empty(filter_entities('binary_sensor', state='on', window_room=room_name)) else Next()"
+
+  schedule_append:
+  - v: 55
+
+  rooms:
+
+    living:
+      rescheduling_delay: 180
+      actors:
+        climate.living_room_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['standard'])"
+
+    master:
+      rescheduling_delay: 180
+      actors:
+        climate.master_bedroom_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['standard'])"
+
+    kid:
+      rescheduling_delay: 180
+      actors:
+        climate.kids_room_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['coldrooms'])"
+
+    entry:
+      rescheduling_delay: 180
+      actors:
+        climate.entryway_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['coldrooms'])"
+
+    kitchen:
+      rescheduling_delay: 180
+      actors:
+        climate.kitchen_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['standard'])"
+
+    guest:
+      rescheduling_delay: 720
+      actors:
+        climate.guest_room_thermostat:
+      schedule:
+      - x: "IncludeSchedule(schedule_snippets['coldrooms'])"

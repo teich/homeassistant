@@ -145,3 +145,10 @@ light.wine_cellar_wine_cellar_cans:
   friendly_name: Wine Cellar Cans
 light.wine_cellar_wine_cellar_pendant:
   friendly_name: Wine Cellar Pendant
+
+
+## Schedy
+binary_sensor.master_patio_door:
+  window_room: master
+binary_sensor.master_window:
+  window_room: master
