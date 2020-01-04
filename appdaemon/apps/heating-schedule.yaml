@@ -2,13 +2,7 @@ schedy_heating:  # This is our app instance name.
   module: hass_apps_loader
   class: SchedyApp
 
-  debug: true
-
   actor_type: thermostat
-
-  expression_environment: |
-    def vacation_mode():
-      return state("input_boolean.vacation_mode")
 
   schedule_snippets:
     standard:
