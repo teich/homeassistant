@@ -2,11 +2,13 @@ schedy_heating:  # This is our app instance name.
   module: hass_apps_loader
   class: SchedyApp
 
+  debug: true
+
   actor_type: thermostat
 
   expression_environment: |
     def vacation_mode():
-      return state("input_select.vacation_mode")
+      return state("input_boolean.vacation_mode")
 
   schedule_snippets:
     standard:
@@ -14,11 +16,11 @@ schedy_heating:  # This is our app instance name.
       rules:
       - weekdays: 1-5
         rules:
-          - x: "Next() if vacation_mode() == 'Off' else Break()"
-          - { start: "05:00", end: "18:00" }
+          - { start: "05:00", end: "08:00" }
+          - { start: "17:00", end: "20:00" }
       - weekdays: 6-7
         rules:
-          - { start: "05:00", end: "18:00" }
+          - { start: "06:00", end: "20:00" }
     coldrooms:
     - v: 60
       rules:
@@ -27,12 +29,16 @@ schedy_heating:  # This is our app instance name.
           - { start: "05:00", end: "20:00" }
 
   watched_entities:
-  - input_select.vacation_mode
-  - binary_sensor.master_patio_door
-  - binary_sensor.master_window
-
+  - input_boolean.vacation_mode
+  
+  # Common rules applied to all rooms go here
   schedule_prepend:
-  - x: "Mark(OFF, Mark.OVERLAY) if not is_empty(filter_entities('binary_sensor', state='on', window_room=room_name)) else Next()"
+
+  # Turn heat way down if room window is open
+  - x: "Mark(55, Mark.OVERLAY) if not is_empty(filter_entities('binary_sensor', state='on', window_room=room_name)) else Next()"
+  
+  # turn heat way down on Vacation mode
+  - x: "Mark(50, Mark.OVERLAY) if is_on('input_boolean.vacation_mode') else Next()"
 
   schedule_append:
   - v: 55
@@ -52,6 +58,8 @@ schedy_heating:  # This is our app instance name.
         climate.master_bedroom_thermostat:
       schedule:
       - x: "IncludeSchedule(schedule_snippets['standard'])"
+      watched_entities:
+      - binary_sensor.master_patio_door
 
     kid:
       rescheduling_delay: 180
