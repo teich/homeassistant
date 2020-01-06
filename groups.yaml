@@ -73,8 +73,8 @@ master_bedroom:
     - light.master_bed_m_bed_lamp_right
     - switch.fan
 
-master_patio_blinds:
-  name: Master Patio Blinds
+master_deck_blinds:
+  name: Master Deck Blinds
   entities:
     - cover.master_bed_deck_blackout
     - cover.master_bed_deck_sheer

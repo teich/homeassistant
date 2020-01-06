@@ -53,7 +53,7 @@ schedy_heating:  # This is our app instance name.
       schedule:
       - x: "IncludeSchedule(schedule_snippets['standard'])"
       watched_entities:
-      - binary_sensor.master_patio_door
+      - binary_sensor.master_deck_door
 
     kid:
       rescheduling_delay: 180
