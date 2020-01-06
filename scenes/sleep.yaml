@@ -35,7 +35,7 @@
     light.powder_room_powder_fan: off
     light.powder_room_powder_room_pendant: off
     light.powder_room_powder_room_can: off
-    switch.hot_water_circulation_pump: off
+    switch.hot_water_recirc: off
     light.living_room_stair_up_art_wall_lights: off
     light.living_room_stair_up_hall_cans_x_8: off
     light.living_room_stair_up_piano_wall_stair_up_cans: off

@@ -103,7 +103,7 @@ views:
           - light.powder_room_powder_fan
           - light.powder_room_powder_room_pendant
           - light.powder_room_powder_room_can
-          - switch.hot_water_circulation_pump
+          - switch.hot_water_recirc
         title: Laundry & Powder Room
         show_header_toggle: true
       - type: entities
