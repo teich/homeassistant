@@ -62,12 +62,6 @@ input_datetime:
     has_date: false
     has_time: true
 
-wemo:
-  # discovery: true
-  static:
-    - 192.168.1.90 
-    - 192.168.1.238
-
 weather:
   - platform: darksky
     api_key: !secret darksky
