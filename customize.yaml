@@ -150,7 +150,5 @@ light.wine_cellar_wine_cellar_pendant:
 ## Schedy
 binary_sensor.master_deck_door:
   window_room: master
-
-## commented out because I don't want this window counting or the heat right now.
-# binary_sensor.master_window:
-#   window_room: master
+binary_sensor.master_window:
+  window_room: master
