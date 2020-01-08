@@ -16,7 +16,7 @@ schedy_heating:  # This is our app instance name.
         rules:
           - { start: "06:00", end: "20:00" }
     coldrooms:
-    - v: 60
+    - v: 61
       rules:
       - weekdays: 1-7
         rules:
@@ -54,13 +54,16 @@ schedy_heating:  # This is our app instance name.
       - x: "IncludeSchedule(schedule_snippets['standard'])"
       watched_entities:
       - binary_sensor.master_deck_door
+      - binary_sensor.master_window
 
     kid:
       rescheduling_delay: 180
       actors:
         climate.kids_room_thermostat:
       schedule:
-      - x: "IncludeSchedule(schedule_snippets['coldrooms'])"
+      - x: "IncludeSchedule(schedule_snippets['standard'])"
+      watched_entities:
+      - binary_sensor.kids_room_window_sensor
 
     entry:
       rescheduling_delay: 180

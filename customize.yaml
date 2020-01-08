@@ -152,3 +152,5 @@ binary_sensor.master_deck_door:
   window_room: master
 binary_sensor.master_window:
   window_room: master
+binary_sensor.kids_room_window_sensor:
+  window_room: kid
