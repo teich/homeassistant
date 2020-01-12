@@ -1,0 +1,20 @@
+- id: door-sunset
+  alias: 'Turn lights on when door open after sunset'
+  trigger:
+    type: opened
+    platform: device
+    device_id: 59aa1562ff2349c2a91c5952dae62a4b
+    entity_id: binary_sensor.backyard_sliding_door
+    domain: binary_sensor
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+      - condition: state
+        entity_id: sun.sun
+        state: "below_horizon"
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.exterior
