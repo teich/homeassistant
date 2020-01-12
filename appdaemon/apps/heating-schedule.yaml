@@ -6,21 +6,24 @@ schedy_heating:  # This is our app instance name.
 
   schedule_snippets:
     standard:
-    - v: 68
+    - months: 1-4, 11-12
+      weekdays: 1-5
       rules:
-      - weekdays: 1-5
-        rules:
-          - { start: "05:00", end: "08:00" }
-          - { start: "17:00", end: "20:00" }
-      - weekdays: 6-7
-        rules:
-          - { start: "06:00", end: "20:00" }
+      - { v: 68, start: "05:00", end: "08:00" }
+      - { v: 66, start: "17:00", end: "20:00" }
+    - months: 1-4, 11-12
+      weekdays: 6-7
+      rules:
+      - { v: 68, start: "06:00", end: "20:00"}
+    bedrooms:
+    - months: 1-4, 11-12
+      weekdays: 1-7
+      rules:
+      - { v: 68, start: "05:00", end: "07:15" }
     coldrooms:
-    - v: 61
+    - months: 1-4, 11-12
       rules:
-      - weekdays: 1-7
-        rules:
-          - { start: "05:00", end: "20:00" }
+      - { v: 61, start: "05:00", end: "20:00" }
 
   watched_entities:
   - input_boolean.vacation_mode
@@ -51,7 +54,7 @@ schedy_heating:  # This is our app instance name.
       actors:
         climate.master_bedroom_thermostat:
       schedule:
-      - x: "IncludeSchedule(schedule_snippets['standard'])"
+      - x: "IncludeSchedule(schedule_snippets['bedrooms'])"
       watched_entities:
       - binary_sensor.master_deck_door
       - binary_sensor.master_window
@@ -61,7 +64,7 @@ schedy_heating:  # This is our app instance name.
       actors:
         climate.kids_room_thermostat:
       schedule:
-      - x: "IncludeSchedule(schedule_snippets['standard'])"
+      - x: "IncludeSchedule(schedule_snippets['bedrooms'])"
       watched_entities:
       - binary_sensor.kids_room_window_sensor
 
