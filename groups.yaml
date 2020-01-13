@@ -99,6 +99,12 @@ exterior:
     - light.master_bed_exterior_deck_sconce
     - light.office_stair_landing_exterior_deck_step_lights
 
+backyard:
+  name: Backyard
+  entities:
+    - light.back_deck_exterior_cans
+    - light.kitchen_breakfast_nook_kitchen_exterior
+    
 landing:
   entities:
     - light.dining_room_stair_down_top_of_stair_sconce_nook_lights
