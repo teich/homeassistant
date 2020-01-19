@@ -1,0 +1,11 @@
+- id: receiver-sonos-off
+  alias: 'Turn receiver off when sonos stops playing'
+  trigger:
+    platform: state
+    entity_id: media_player.media
+    to: 'paused'
+    for:
+      seconds: 120
+  action:
+  - service: media_player.turn_off
+    entity_id: media_player.lr_receiver
