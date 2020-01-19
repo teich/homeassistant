@@ -20,7 +20,7 @@ light:
     id: shoelights
     variant: SK6812
     pin: GPIO3
-    num_leds: 60
+    num_leds: 200
     type: GRBW
     name: "Shoes Lights"
 
