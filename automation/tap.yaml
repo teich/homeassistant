@@ -1,0 +1,23 @@
+- id: tap-office-2
+  alias: 'button 2 on tap'
+  trigger:
+    device_id: 4ac8d3b4259c4bd1b2cf5b4bd3cc2647
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: button_2
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.office_stair_landing_office_cans
+
+- id: tap-office-1
+  alias: 'button 1 on tap'
+  trigger:
+    device_id: 4ac8d3b4259c4bd1b2cf5b4bd3cc2647
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: button_1
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.office_stair_landing_office_cans
