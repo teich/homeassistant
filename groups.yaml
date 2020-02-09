@@ -1,14 +1,5 @@
-default_view:
-  view: true
-  icon: mdi:home
-  entities:
-    - group.main_scenes
-    - group.family
-    - group.main_controls
-
 downstairs:
   name: Downstairs
-  view: yes
   entities:
     - group.entry
     - group.guest_bedroom
@@ -18,7 +9,6 @@ downstairs:
     
 main_floor:
   name: Main Floor
-  view: yes
   entities:
     - group.dining
     - group.kitchen
@@ -28,7 +18,6 @@ main_floor:
 
 upstairs:
   name: Upstairs
-  view: yes
   entities:
     - group.office
     - group.beckett_room
@@ -37,7 +26,6 @@ upstairs:
 
 cameras:
   name: Cameras
-  view: yes
   icon: mdi:camera
   entities:
     - camera.garage
@@ -170,14 +158,11 @@ wine:
 
 garage:
   name: Garage
-  control: hidden
   entities: 
     - cover.30th_garage_door
 
 family:
   name: Family People
-  view: false
-  control: hidden
   entities:
     - person.oren_teich
     - person.olivia_teich
@@ -185,7 +170,6 @@ family:
 sonos:
   name: sonos
   icon: mdi:music-circle
-  view: yes
   entities:
     - media_player.media
     - media_player.kitchen
@@ -198,8 +182,6 @@ sonos:
 
 main_controls:
   name: Main Controls
-  view: false
-  control: hidden
   entities:
     - cover.30th_garage_door
     - input_boolean.party_mode
@@ -208,8 +190,6 @@ main_controls:
 
 main_scenes:
   name: Scenes
-  view: false
-  control: hidden
   entities:
     - scene.bedtime
     - scene.morning
@@ -218,7 +198,6 @@ main_scenes:
 
 thermostats:
   icon: mdi:radiator
-  view: yes
   entities:
     - climate.entryway
     - climate.guest_room
@@ -226,10 +205,3 @@ thermostats:
     - climate.living_room
     - climate.kids_room
     - climate.master_bedroom
-
-skylights:
-  view: no
-  entities:
-    - cover.velux_window_2
-    - cover.velux_window_3
-
