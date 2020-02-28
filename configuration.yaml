@@ -103,3 +103,4 @@ group: !include groups.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
 homekit: !include homekit.yaml
+script: !include scripts.yaml

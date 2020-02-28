@@ -1,0 +1,7 @@
+display_art:
+  alias: Display Art
+  sequence:
+  - data:
+      source: Artcast
+    entity_id: media_player.roku_yh009l597988
+    service: media_player.select_source
