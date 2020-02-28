@@ -9,3 +9,16 @@
   action:
   - service: media_player.turn_off
     entity_id: media_player.lr_receiver
+  - service: media_player.turn_off
+    entity_id: media_player.roku_yh009l597988
+
+- id: play-art-media
+  alias: 'Play art when playing music'
+  trigger:
+    platform: state
+    entity_id: media_player.media
+    to:  'playing'
+  action:
+    - service: script.turn_on
+      entity_id: script.display_art
+
