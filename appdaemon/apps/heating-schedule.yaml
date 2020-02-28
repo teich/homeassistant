@@ -9,12 +9,12 @@ schedy_heating:  # This is our app instance name.
     - months: 1-4, 11-12
       weekdays: 1-5
       rules:
-      - { v: 68, start: "05:00", end: "08:00" }
+      - { v: 66, start: "05:00", end: "08:00" }
       - { v: 66, start: "17:00", end: "20:00" }
     - months: 1-4, 11-12
       weekdays: 6-7
       rules:
-      - { v: 68, start: "06:00", end: "20:00"}
+      - { v: 66, start: "06:00", end: "20:00"}
     bedrooms:
     - months: 1-4, 11-12
       weekdays: 1-7
