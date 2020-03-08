@@ -14,6 +14,41 @@
     service: homeassistant.turn_on
     entity_id: scene.bedtime
 
+- id: sunset-bedroom-blinds
+  alias: 'Close blinds at sunset if door closed'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:15:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.master_deck_door
+        state: 'closed'
+  action:
+    service: cover.close_cover
+    entity_id: group.master_deck_blinds
+
+- id: sunset-bedroom-blinds-door
+  alias: 'Close blinds when closing door'
+  trigger:
+    type: closed
+    platform: device
+    device_id: 2aff7e054c274ce4a3906d695518ec5e
+    entity_id: binary_sensor.master_deck_door
+    domain: binary_sensor
+  condition:
+    condition: state  # from sunset until sunrise
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+    service: cover.close_cover
+    entity_id: group.master_deck_blinds
+
 - id: weekday-wakeup
   alias: "Master Weekday Wakeup"
   trigger:
@@ -75,15 +110,15 @@
     device_id: 2aff7e054c274ce4a3906d695518ec5e
     entity_id: binary_sensor.master_deck_door
     domain: binary_sensor
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: cover.master_bed_deck_blackout
-        state: 'closed'
-      - condition: state
-        entity_id: cover.master_bed_deck_sheer
-        state: 'closed'
+  # condition:
+  #   condition: or
+  #   conditions:
+  #     - condition: state
+  #       entity_id: cover.master_bed_deck_blackout
+  #       state: 'closed'
+  #     - condition: state
+  #       entity_id: cover.master_bed_deck_sheer
+  #       state: 'closed'
   action:
     service: cover.open_cover
     entity_id: group.master_deck_blinds
