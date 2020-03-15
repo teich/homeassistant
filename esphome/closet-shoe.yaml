@@ -20,28 +20,15 @@ light:
     id: shoelights
     variant: SK6812
     pin: GPIO3
-    num_leds: 200
+    num_leds: 240
     type: GRBW
+    effects: 
+      - addressable_rainbow:
+      - addressable_color_wipe:
+      - addressable_scan:
+      - addressable_twinkle:
+      - addressable_fireworks:
     name: "Shoes Lights"
-
-#   - platform: partition
-#     name: "Shelf 1"
-#     segments:
-#       - id: shoelights
-#         from: 0
-#         to: 30
-#   - platform: partition
-#     name: "Shelf 2"
-#     segments:
-#       - id: shoelights
-#         from: 61
-#         to: 93
-#   - platform: partition
-#     name: "Shelf 3"
-#     segments:
-#       - id: shoelights
-#         from: 109
-#         to: 139
 
 binary_sensor:
   - platform: gpio
