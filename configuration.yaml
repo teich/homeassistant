@@ -66,20 +66,20 @@ weather:
   - platform: darksky
     api_key: !secret darksky
 
-badnest:
-  issue_token: !secret nest_issue_token
-  cookie: !secret nest_cookie
-  region: us
+# badnest:
+#   issue_token: !secret nest_issue_token
+#   cookie: !secret nest_cookie
+#   region: us
 
-climate:
-  - platform: badnest
-    scan_interval: 30
+# climate:
+#   - platform: badnest
+#     scan_interval: 30
 
 sensor:
   - platform: time_date
     display_options:
       - 'time'
-  - platform: badnest
+  # - platform: badnest
 #  - platform: xiaomi_miio
 #    name: Xiaomi Air Quality Monitor
 #    host: 192.168.1.49
