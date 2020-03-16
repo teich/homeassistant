@@ -33,22 +33,6 @@
     service: cover.close_cover
     entity_id: group.master_deck_blinds
 
-- id: sunset-bedroom-blinds-door
-  alias: 'Close blinds when closing door'
-  trigger:
-    type: closed
-    platform: device
-    device_id: 2aff7e054c274ce4a3906d695518ec5e
-    entity_id: binary_sensor.master_deck_door
-    domain: binary_sensor
-  condition:
-    condition: state  # from sunset until sunrise
-    entity_id: sun.sun
-    state: 'below_horizon'
-  action:
-    service: cover.close_cover
-    entity_id: group.master_deck_blinds
-
 - id: weekday-wakeup
   alias: "Master Weekday Wakeup"
   trigger:
@@ -110,15 +94,22 @@
     device_id: 2aff7e054c274ce4a3906d695518ec5e
     entity_id: binary_sensor.master_deck_door
     domain: binary_sensor
-  # condition:
-  #   condition: or
-  #   conditions:
-  #     - condition: state
-  #       entity_id: cover.master_bed_deck_blackout
-  #       state: 'closed'
-  #     - condition: state
-  #       entity_id: cover.master_bed_deck_sheer
-  #       state: 'closed'
   action:
     service: cover.open_cover
+    entity_id: group.master_deck_blinds
+
+- id: sunset-blinds-door
+  alias: "Close blinds when closing door"
+  trigger:
+    type: not_opened
+    platform: device
+    device_id: 2aff7e054c274ce4a3906d695518ec5e
+    entity_id: binary_sensor.master_deck_door
+    domain: binary_sensor
+  condition:
+    condition: state  
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+    service: cover.close_cover
     entity_id: group.master_deck_blinds
