@@ -42,6 +42,11 @@ lutron:
 binary_sensor:
   - platform: workday
     country: US
+  - platform: template
+    sensors:
+      wine_ac_on:
+        friendly_name: "Wine AC Running"
+        value_template:  "{{ states('sensor.wine_ac_electrical_measurement')|float > 5 }}"
 
 timer:
   front_door_lock:
