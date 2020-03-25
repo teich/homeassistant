@@ -19,7 +19,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: '-00:15:00'
+    offset: '-00:14:00'
   condition:
     condition: and
     conditions:
@@ -28,10 +28,12 @@
         state: 'off'
       - condition: state
         entity_id: binary_sensor.master_deck_door
-        state: 'closed'
+        state: 'off'
   action:
-    service: cover.close_cover
-    entity_id: group.master_deck_blinds
+    - service: cover.close_cover
+      entity_id: cover.master_bed_deck_sheer
+    - service: cover.close_cover
+      entity_id: cover.master_bed_deck_blackout
 
 - id: weekday-wakeup
   alias: "Master Weekday Wakeup"
