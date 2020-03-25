@@ -48,6 +48,8 @@ light.office_stair_landing_stair_hall_cans:
   friendly_name: Upstairs Hall Cans
 light.office_stair_landing_office_cans:
   friendly_name: Office Cans
+light.desk_lamp:
+  icon: mdi:desk-lamp
 
 ## Master Bedroom
 cover.master_bed_bed_corner_window:
