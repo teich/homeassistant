@@ -92,7 +92,7 @@ sensor:
 
 yeelight:
   devices:
-    192.168.2.250:
+    192.168.77.248:
       name: 'Desk Lamp'
       
 media_player:
