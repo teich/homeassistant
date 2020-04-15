@@ -31,7 +31,7 @@ cover:
     type: chamberlain
 
 lutron:
-  host: 192.168.1.181
+  host: 192.168.2.70
   username: !secret lutron_username
   password: !secret lutron_password
 
@@ -92,13 +92,13 @@ sensor:
 
 yeelight:
   devices:
-    192.168.77.248:
+    192.168.1.244:
       name: 'Desk Lamp'
       
-media_player:
-  - platform: onkyo
-    host: 192.168.1.12
-    name: lr_receiver
+# media_player:
+#   - platform: onkyo
+#     host: 192.168.1.12
+#     name: lr_receiver
 
 influxdb:
   host: a0d7b954-influxdb
