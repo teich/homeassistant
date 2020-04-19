@@ -103,6 +103,7 @@ yeelight:
 camera:
   - platform: generic
     name: "Garage Camera"
+    still_image_url: http://192.168.1.195/snap.jpg
     stream_source: rtsp://192.168.1.1:7447/jX5dDRotdjxj5RDk
 
 influxdb:

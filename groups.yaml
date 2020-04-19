@@ -121,6 +121,8 @@ guest_bedroom:
     - light.guest_bath_bath_3_towel_warmer
     - light.guest_bath_guest_bath_fan
     - light.guest_bed_guest_bed_cans
+    - light.elgato_key_light
+    - light.desk_lamp
 
 kitchen:
   name: Kitchen
