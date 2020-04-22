@@ -46,16 +46,16 @@ binary_sensor:
     name: "Closet LED Motion Sensor"
     device_class: motion
 
-# sensor:
-#   - platform: xiaomi_miflora
-#     mac_address: 94:2B:FF:5C:91:61
-#     temperature:
-#       name: "Xiaomi MiFlora Temperature"
-#     moisture:
-#       name: "Xiaomi MiFlora Moisture"
-#     illuminance:
-#       name: "Xiaomi MiFlora Illuminance"
-#     conductivity:
-#       name: "Xiaomi MiFlora Soil Conductivity"
-#     battery_level:
-#       name: "Xiaomi MiFlora Battery Level"
+sensor:
+  - platform: xiaomi_hhccjcy01
+    mac_address: C4:7C:8D:64:10:BD 
+    temperature:
+      name: "Master MiFlora Temperature"
+    moisture:
+      name: "Master MiFlora Moisture"
+    illuminance:
+      name: "Master MiFlora Illuminance"
+    conductivity:
+      name: "Master MiFlora Soil Conductivity"
+    battery_level:
+      name: "Master MiFlora Battery Level"
