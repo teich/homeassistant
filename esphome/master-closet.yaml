@@ -6,6 +6,7 @@ esphome:
 wifi:
   ssid: "spigot"
   password: !secret wifi_password
+  use_address: 192.168.2.110
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
