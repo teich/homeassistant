@@ -11,13 +11,21 @@ default_config:
 
 recorder:
   purge_keep_days: 5
-  purge_interval: 1
   db_url: mysql://hass:random4171261@core-mariadb/homeassistant?charset=utf8
 
 discovery:
 hassio:
-# lovelace:
-#   mode: yaml
+
+lovelace:
+  mode: storage
+  # Add yaml dashboards
+  dashboards:
+    lovelace-soft:
+      mode: yaml
+      title: Soft
+      icon: mdi:script
+      show_in_sidebar: true
+      filename: ui-lovelace-soft.yaml
 
 august:
   login_method: email
@@ -70,6 +78,9 @@ input_datetime:
 weather:
   - platform: darksky
     api_key: !secret darksky
+
+frontend:
+  themes: !include_dir_merge_named themes
 
 # badnest:
 #   issue_token: !secret nest_issue_token
