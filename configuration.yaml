@@ -95,6 +95,14 @@ sensor:
   - platform: time_date
     display_options:
       - 'time'
+
+  - platform: template
+    sensors: 
+      ups_power:
+        friendly_name: "UPS Power Usage"
+        unit_of_measurement: 'W'
+        value_template: "{{ state_attr('switch.garage_ups', 'current_power_w') }}"
+
   # - platform: badnest
 #  - platform: xiaomi_miio
 #    name: Xiaomi Air Quality Monitor
@@ -145,5 +153,4 @@ plant:
 group: !include groups.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
-homekit: !include homekit.yaml
 script: !include scripts.yaml
