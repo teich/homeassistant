@@ -11,13 +11,21 @@ default_config:
 
 recorder:
   purge_keep_days: 5
-  purge_interval: 1
   db_url: mysql://hass:random4171261@core-mariadb/homeassistant?charset=utf8
 
 discovery:
 hassio:
-# lovelace:
-#   mode: yaml
+
+lovelace:
+  mode: storage
+  # Add yaml dashboards
+  dashboards:
+    lovelace-soft:
+      mode: yaml
+      title: Soft
+      icon: mdi:script
+      show_in_sidebar: true
+      filename: ui-lovelace-soft.yaml
 
 august:
   login_method: email
@@ -71,6 +79,9 @@ weather:
   - platform: darksky
     api_key: !secret darksky
 
+frontend:
+  themes: !include_dir_merge_named themes
+
 # badnest:
 #   issue_token: !secret nest_issue_token
 #   cookie: !secret nest_cookie
@@ -84,6 +95,14 @@ sensor:
   - platform: time_date
     display_options:
       - 'time'
+
+  - platform: template
+    sensors: 
+      ups_power:
+        friendly_name: "UPS Power Usage"
+        unit_of_measurement: 'W'
+        value_template: "{{ state_attr('switch.garage_ups', 'current_power_w') }}"
+
   # - platform: badnest
 #  - platform: xiaomi_miio
 #    name: Xiaomi Air Quality Monitor
@@ -134,5 +153,4 @@ plant:
 group: !include groups.yaml
 scene: !include_dir_list scenes
 automation: !include_dir_merge_list automation
-homekit: !include homekit.yaml
 script: !include scripts.yaml

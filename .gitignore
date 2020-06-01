@@ -50,4 +50,5 @@ deps
 .storage/*
 .homekit.state
 @eaDir/
+themes/
 
